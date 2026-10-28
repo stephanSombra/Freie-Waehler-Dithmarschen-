@@ -5,21 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Freie Wähler – Dithmarschen</title>
-  <meta name="description" content="Freie Wähler Kreisvereinigung Dithmarschen – unabhängig, regional und mittendrin.">
+  <meta name="description" content="Freie Wähler – Kreisvereinigung Dithmarschen. Unabhängig, regional und mittendrin. Für unsere Heimat und unsere Zukunft.">
   <meta name="theme-color" content="#111111">
 
-  <!-- Link-Vorschau (WhatsApp, Facebook, …): Domain und Bild anpassen, Bild ca. 1200 × 630 px -->
+  <!-- Social-Media-Vorschau: Domain und Vorschaubild später aktualisieren -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
   <meta property="og:title" content="Freie Wähler – Dithmarschen">
   <meta property="og:description" content="Unsere Heimat. Unsere Zukunft. Zeit, gemeinsam nach vorn zu denken.">
-  <meta property="og:url" content="https://www.example.de/">
-  <meta property="og:image" content="https://www.example.de/og-bild.jpg">
+  <!-- TODO: Nach Einrichtung der Domain echte URL eintragen -->
+  <meta property="og:url" content="">
+  <!-- TODO: Vollständige absolute URL zum Vorschaubild eintragen -->
+  <meta property="og:image" content="">
 
-  <!-- Platzhalter-Favicon, später durch das Logo ersetzen -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f56608'/%3E%3Ctext x='32' y='47' font-size='44' font-weight='900' text-anchor='middle' fill='%23111' font-family='Arial'%3EF%3C/text%3E%3C/svg%3E">
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
 
-  <!-- Hero-Bild früh laden; am besten als WebP/AVIF, ca. 1920 px breit -->
+  <!-- Hero-Bild früh laden -->
   <link rel="preload" as="image" href="dithmarschen-hero.jpg" fetchpriority="high">
 
   <style>
@@ -47,7 +49,7 @@
     .hero {
       position: relative;
       min-height: 100vh;
-      min-height: 100svh; /* nach 100vh, sonst greift svh nie */
+      min-height: 100svh;
       display: flex;
       flex-direction: column;
       background:
@@ -80,22 +82,17 @@
       gap: 16px;
       text-decoration: none;
       color: #fff;
+      min-width: 0;
     }
 
-    /* Platzhalter. Logo morgen: <img class="brand-logo" src="logo-weiss.svg" alt="" height="58">
-       statt .brand-mark, mit .brand-logo { height: 58px; width: auto; } */
-    .brand-mark {
-      width: 48px;
+    /* Offizielles Logo: transparenter Hintergrund empfohlen */
+    .brand-logo {
+      display: block;
+      width: auto;
       height: 58px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      max-width: min(180px, 35vw);
+      object-fit: contain;
       flex-shrink: 0;
-      background: #f56608;
-      color: #111;
-      font-size: 34px;
-      font-weight: 900;
-      transform: skewY(-5deg);
     }
 
     .brand-name,
@@ -186,7 +183,7 @@
       margin-top: 54px;
       padding: 22px 28px;
       background: #f56608;
-      color: #111; /* ca. 6:1 statt 3,1:1 bei Weiß */
+      color: #111;
       text-decoration: none;
       font-size: 14px;
       font-weight: 800;
@@ -249,10 +246,9 @@
         gap: 10px;
       }
 
-      .brand-mark {
-        width: 38px;
+      .brand-logo {
         height: 46px;
-        font-size: 27px;
+        max-width: 90px;
       }
 
       .brand-name {
@@ -260,11 +256,11 @@
       }
 
       .brand-subtitle {
-        font-size: 12px;
+        font-size: 10px;
         letter-spacing: 1px;
+        line-height: 1.5;
       }
 
-      /* doppelt zum Subtitle und zur Überschrift, mobil entbehrlich */
       .top-claim {
         display: none;
       }
@@ -285,7 +281,6 @@
         height: 4px;
       }
 
-      /* "DITHMARSCHEN." ist ca. 8 em breit, 10 vw bleibt sicher innerhalb der Spalte */
       h1 {
         font-size: clamp(30px, 10vw, 68px);
       }
@@ -321,12 +316,18 @@
 </head>
 
 <body>
-
   <div class="hero">
 
     <header class="topbar">
       <a class="brand" href="index.html" aria-label="Freie Wähler Dithmarschen – Startseite">
-        <span class="brand-mark" aria-hidden="true">F</span>
+
+        <!-- Offizielles Landesverbandslogo -->
+        <img
+          class="brand-logo"
+          src="images/logo-freie-waehler.png"
+          alt="Freie Wähler"
+          fetchpriority="high"
+        >
 
         <span>
           <span class="brand-name">FREIE WÄHLER</span>
@@ -371,6 +372,5 @@
     </footer>
 
   </div>
-
 </body>
 </html>
