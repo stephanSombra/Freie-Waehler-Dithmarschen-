@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -35,12 +36,20 @@
       color: var(--black);
       background: var(--white);
       font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.65;
       overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
     }
 
     a {
       color: inherit;
       text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 4px;
     }
 
     .topline {
@@ -64,12 +73,14 @@
       gap: 12px;
       font-weight: 900;
       text-transform: uppercase;
-      line-height: 1.1;
+      line-height: 1.2;
+      flex-shrink: 0;
     }
 
     .brand-mark {
       width: 40px;
       height: 40px;
+      flex-shrink: 0;
       display: grid;
       place-items: center;
       background: var(--orange);
@@ -80,7 +91,7 @@
 
     .brand-name {
       font-size: 15px;
-      letter-spacing: -.5px;
+      letter-spacing: -.2px;
     }
 
     .brand-name small {
@@ -89,6 +100,7 @@
       color: var(--muted);
       font-size: 10px;
       letter-spacing: 1.3px;
+      line-height: 1.5;
     }
 
     nav {
@@ -97,23 +109,29 @@
       gap: 24px;
       font-size: 11px;
       font-weight: 900;
-      letter-spacing: .7px;
+      letter-spacing: .9px;
+      line-height: 1.5;
       text-transform: uppercase;
     }
 
-    nav a:hover {
+    nav a:not(.nav-button):hover {
       color: var(--orange-dark);
     }
 
     .nav-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       padding: 14px 17px;
       color: var(--white);
       background: var(--black);
+      transition: background .2s, color .2s, transform .2s;
     }
 
     .nav-button:hover {
       color: var(--white);
       background: var(--orange);
+      transform: translateY(-1px);
     }
 
     .page-hero {
@@ -152,6 +170,7 @@
       font-size: 11px;
       font-weight: 900;
       letter-spacing: 2.3px;
+      line-height: 1.6;
       text-transform: uppercase;
     }
 
@@ -159,6 +178,7 @@
       content: "";
       width: 34px;
       height: 4px;
+      flex-shrink: 0;
       background: var(--orange);
     }
 
@@ -166,8 +186,8 @@
       max-width: 1050px;
       font-size: clamp(58px, 10vw, 128px);
       font-weight: 950;
-      letter-spacing: -.085em;
-      line-height: .85;
+      letter-spacing: -.035em;
+      line-height: 1.02;
       text-transform: uppercase;
     }
 
@@ -181,7 +201,7 @@
       margin-top: 35px;
       color: #d5d5d0;
       font-size: clamp(17px, 2vw, 21px);
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     .hero-meta {
@@ -197,6 +217,7 @@
       font-size: 10px;
       font-weight: 800;
       letter-spacing: 1.2px;
+      line-height: 1.6;
       text-transform: uppercase;
     }
 
@@ -218,14 +239,15 @@
       font-size: 11px;
       font-weight: 900;
       letter-spacing: 2px;
+      line-height: 1.6;
       text-transform: uppercase;
     }
 
     h2 {
       font-size: clamp(38px, 6vw, 72px);
       font-weight: 950;
-      letter-spacing: -.07em;
-      line-height: .94;
+      letter-spacing: -.035em;
+      line-height: 1.05;
       text-transform: uppercase;
     }
 
@@ -261,18 +283,38 @@
     }
 
     .question h3 {
-      margin-bottom: 11px;
+      margin-bottom: 14px;
       font-size: clamp(23px, 3vw, 34px);
       font-weight: 900;
-      letter-spacing: -1px;
+      letter-spacing: -.025em;
+      line-height: 1.25;
       text-transform: uppercase;
     }
 
     .question p {
-      max-width: 760px;
+      max-width: 720px;
       color: #555550;
       font-size: 16px;
       line-height: 1.8;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 18px;
+      color: var(--orange-dark);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .4px;
+      line-height: 1.6;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 4px;
+      transition: color .2s;
+    }
+
+    .text-link:hover {
+      color: var(--black);
     }
 
     .focus-section {
@@ -288,7 +330,7 @@
 
     .focus-card {
       min-height: 220px;
-      padding: 30px;
+      padding: 32px;
       background: var(--white);
       border-top: 5px solid var(--orange);
     }
@@ -301,10 +343,11 @@
     }
 
     .focus-card h3 {
-      margin-top: 24px;
+      margin-top: 22px;
       font-size: clamp(22px, 3vw, 30px);
       font-weight: 950;
-      letter-spacing: -1px;
+      letter-spacing: -.025em;
+      line-height: 1.25;
       text-transform: uppercase;
     }
 
@@ -312,7 +355,7 @@
       margin-top: 13px;
       color: #5b5b56;
       font-size: 15px;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     .board-grid {
@@ -337,27 +380,30 @@
       font-size: 10px;
       font-weight: 900;
       letter-spacing: 1.2px;
+      line-height: 1.6;
       text-transform: uppercase;
     }
 
     .board-card h3 {
       font-size: 20px;
-      line-height: 1.2;
+      line-height: 1.3;
       font-weight: 900;
+      letter-spacing: -.025em;
+      overflow-wrap: anywhere;
     }
 
     .board-card p {
       margin-top: 9px;
       color: var(--muted);
       font-size: 12px;
-      line-height: 1.5;
+      line-height: 1.7;
     }
 
     .placeholder-note {
       margin-top: 18px;
       color: var(--muted);
       font-size: 12px;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     .events {
@@ -388,20 +434,22 @@
       font-size: 12px;
       font-weight: 900;
       letter-spacing: 1px;
+      line-height: 1.7;
       text-transform: uppercase;
-      line-height: 1.6;
     }
 
     .event h3 {
       font-size: 21px;
       font-weight: 900;
+      letter-spacing: -.025em;
+      line-height: 1.3;
     }
 
     .event p {
       margin-top: 7px;
       color: #c9c9c4;
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
     .event-arrow {
@@ -433,14 +481,15 @@
     .contact-panel h3 {
       font-size: 27px;
       font-weight: 950;
-      letter-spacing: -1px;
+      letter-spacing: -.025em;
+      line-height: 1.25;
       text-transform: uppercase;
     }
 
     .contact-panel p {
       margin-top: 15px;
       font-size: 15px;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     .contact-details {
@@ -467,13 +516,16 @@
       color: var(--black);
       font-size: 11px;
       font-weight: 900;
-      letter-spacing: 1px;
+      letter-spacing: 1.1px;
+      line-height: 1.5;
       text-transform: uppercase;
+      transition: background .2s, color .2s, transform .2s;
     }
 
     .contact-button:hover {
       background: var(--black);
       color: var(--white);
+      transform: translateY(-1px);
     }
 
     .join-banner {
@@ -489,30 +541,36 @@
     .join-banner h2 {
       max-width: 720px;
       font-size: clamp(38px, 6vw, 72px);
+      letter-spacing: -.035em;
+      line-height: 1.05;
     }
 
     .join-banner p {
       max-width: 520px;
       margin-top: 18px;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     .join-button {
       flex-shrink: 0;
       display: inline-flex;
+      align-items: center;
       padding: 18px 22px;
       gap: 18px;
       background: var(--white);
       color: var(--black);
       font-size: 11px;
       font-weight: 900;
-      letter-spacing: 1px;
+      letter-spacing: 1.1px;
+      line-height: 1.5;
       text-transform: uppercase;
+      transition: background .2s, color .2s, transform .2s;
     }
 
     .join-button:hover {
       background: var(--black);
       color: var(--white);
+      transform: translateY(-1px);
     }
 
     footer {
@@ -528,6 +586,7 @@
       font-size: 12px;
       font-weight: 900;
       letter-spacing: .7px;
+      line-height: 1.6;
       text-transform: uppercase;
     }
 
@@ -541,6 +600,7 @@
       gap: 20px;
       font-size: 11px;
       font-weight: 800;
+      line-height: 1.8;
       text-transform: uppercase;
     }
 
@@ -552,7 +612,7 @@
       width: 100%;
       color: var(--muted);
       font-size: 11px;
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
     @media (max-width: 900px) {
@@ -594,12 +654,21 @@
     }
 
     @media (max-width: 600px) {
+      header {
+        gap: 12px;
+      }
+
+      .brand {
+        gap: 9px;
+      }
+
       .brand-name {
         font-size: 12px;
       }
 
       .brand-name small {
         font-size: 9px;
+        letter-spacing: .8px;
       }
 
       .nav-button {
@@ -611,17 +680,48 @@
         padding: 75px 6% 70px;
       }
 
+      .page-hero::after {
+        right: -10%;
+        bottom: -50px;
+        font-size: 260px;
+      }
+
       h1 {
-        font-size: clamp(54px, 15vw, 86px);
+        font-size: clamp(48px, 13vw, 78px);
+        letter-spacing: -.025em;
+        line-height: 1.04;
+      }
+
+      .hero-description {
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .hero-meta {
+        gap: 9px;
+      }
+
+      .hero-meta span {
+        padding: 9px 11px;
+        font-size: 9px;
+        letter-spacing: .8px;
       }
 
       .question {
-        grid-template-columns: 42px 1fr;
+        grid-template-columns: 42px minmax(0, 1fr);
         gap: 10px;
+        padding: 26px 0;
       }
 
       .question p {
-        font-size: 15px;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .question h3 {
+        font-size: clamp(22px, 5.5vw, 30px);
+        letter-spacing: -.015em;
+        line-height: 1.3;
       }
 
       .focus-grid {
@@ -630,6 +730,18 @@
 
       .focus-card {
         min-height: 190px;
+        padding: 25px;
+      }
+
+      .focus-card h3 {
+        font-size: clamp(22px, 6vw, 29px);
+        letter-spacing: -.015em;
+        line-height: 1.3;
+      }
+
+      .focus-card p {
+        font-size: 16px;
+        line-height: 1.8;
       }
 
       .board-grid {
@@ -643,10 +755,16 @@
 
       .board-card h3 {
         font-size: 17px;
+        line-height: 1.3;
+      }
+
+      .board-card p {
+        font-size: 13px;
+        line-height: 1.7;
       }
 
       .event {
-        grid-template-columns: 1fr auto;
+        grid-template-columns: minmax(0, 1fr) auto;
         gap: 10px;
       }
 
@@ -656,21 +774,97 @@
 
       .event h3 {
         font-size: 19px;
+        line-height: 1.35;
+      }
+
+      .event p {
+        font-size: 14px;
+        line-height: 1.8;
       }
 
       .contact-panel {
         padding: 25px;
       }
 
+      .contact-panel p,
+      .contact-copy {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .join-banner {
+        padding: 60px 6%;
+      }
+
+      .join-banner h2 {
+        font-size: clamp(36px, 10vw, 58px);
+        letter-spacing: -.025em;
+        line-height: 1.08;
+      }
+
+      .join-banner p {
+        line-height: 1.8;
+      }
+
+      .join-button {
+        max-width: 100%;
+        gap: 12px;
+        padding: 16px;
+        font-size: 10px;
+      }
+
       footer {
         align-items: flex-start;
         flex-direction: column;
+      }
+
+      .footer-links {
+        gap: 14px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .brand-name {
+        font-size: 11px;
+      }
+
+      .brand-name small {
+        font-size: 8px;
+      }
+
+      .nav-button {
+        padding: 10px;
+        font-size: 9px;
+      }
+
+      .question {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .board-card {
+        padding: 13px;
+      }
+
+      .board-card h3 {
+        font-size: 16px;
+      }
+
+      .board-role {
+        font-size: 9px;
+        letter-spacing: .7px;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
       }
     }
   </style>
@@ -832,7 +1026,7 @@
 
         <article class="focus-card">
           <div class="number">THEMA / 02</div>
-          <h3>Natur & Artenvielfalt</h3>
+          <h3>Natur &amp; Artenvielfalt</h3>
           <p>
             Unsere Landschaft und heimischen Arten schützen sowie
             Natur- und Artenschutz in der Region sichtbar machen.
@@ -862,7 +1056,7 @@
     <section class="section" id="vorstand">
       <div class="section-heading">
         <div>
-          <div class="section-label">Verantwortung & Ansprechpartner</div>
+          <div class="section-label">Verantwortung &amp; Ansprechpartner</div>
           <h2>Der Vorstand.<br><span>Das Team dahinter.</span></h2>
         </div>
 
@@ -918,7 +1112,7 @@
     <section class="section events" id="termine">
       <div class="section-heading">
         <div>
-          <div class="section-label">Begegnungen & Austausch</div>
+          <div class="section-label">Begegnungen &amp; Austausch</div>
           <h2>Was steht <span>an?</span></h2>
         </div>
 
@@ -996,6 +1190,7 @@
           </p>
         </div>
 
+        <!-- Vor Veröffentlichung die E-Mail-Adresse in href eintragen. -->
         <a class="contact-button" href="mailto:KONTAKTADRESSE-HIER-EINTRAGEN">
           E-Mail schreiben ↗
         </a>
