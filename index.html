@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -81,7 +82,7 @@
     .brand-name {
       font-size: 15px;
       font-weight: 950;
-      letter-spacing: -.4px;
+      letter-spacing: -.2px;
       line-height: 1.15;
       text-transform: uppercase;
     }
@@ -141,8 +142,6 @@
       background: var(--orange);
     }
 
-
-
     .hero-content {
       width: 100%;
       max-width: 1150px;
@@ -172,8 +171,8 @@
       width: 100%;
       max-width: 100%;
       font-size: clamp(38px, 8.2vw, 112px);
-      line-height: .88;
-      letter-spacing: -.075em;
+      line-height: 1;
+      letter-spacing: -.035em;
       font-weight: 950;
       text-transform: uppercase;
       overflow-wrap: normal;
@@ -184,12 +183,14 @@
       display: block;
       white-space: nowrap;
       font-size: .91em;
+      letter-spacing: -.025em;
     }
 
     h1 .accent {
       display: block;
-      margin-top: 15px;
+      margin-top: 18px;
       color: var(--orange);
+      letter-spacing: -.035em;
     }
 
     .subtitle {
@@ -209,43 +210,47 @@
     }
 
     .main-button {
-      min-height: 59px;
+      min-height: 62px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 30px;
-      padding: 19px 25px;
+      gap: 22px;
+      padding: 16px 22px 16px 26px;
       color: var(--white);
       background: var(--orange);
-      font-size: 11px;
-      font-weight: 950;
-      letter-spacing: 1.5px;
+      border: 1px solid var(--orange);
+      border-radius: 5px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.1px;
       text-transform: uppercase;
-      transition: background .2s, transform .2s;
+      transition: background .2s, transform .2s, box-shadow .2s;
     }
 
     .main-button:hover {
       background: #e85d00;
-      transform: translateY(-3px);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, .25);
     }
 
     .main-button span {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 28px;
-      height: 28px;
-      border: 1px solid rgba(255,255,255,.55);
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,.75);
       border-radius: 50%;
-      font-size: 18px;
+      font-size: 19px;
       line-height: 1;
-      transition: transform .2s, background .2s, border-color .2s;
+      transition: transform .2s, background .2s;
     }
 
     .main-button:hover span {
-      transform: translate(2px, -2px);
+      transform: translate(3px, -2px);
       background: rgba(255,255,255,.16);
-      border-color: rgba(255,255,255,.9);
     }
 
     .bottom-line {
@@ -334,21 +339,24 @@
           url("dithmarschen-hero.jpg");
         background-color: #343b32;
         background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
       }
 
       h1 {
         font-size: clamp(34px, 9.5vw, 62px);
-        letter-spacing: -.065em;
-        line-height: .9;
+        letter-spacing: -.025em;
+        line-height: 1;
       }
 
       h1 .place {
         font-size: .88em;
-        letter-spacing: -.07em;
+        letter-spacing: -.025em;
       }
 
       h1 .accent {
-        margin-top: 12px;
+        margin-top: 14px;
+        letter-spacing: -.035em;
       }
 
       .eyebrow {
@@ -368,11 +376,17 @@
 
       .main-button {
         width: 100%;
-        max-width: 330px;
-        padding: 18px 15px;
-        gap: 14px;
+        max-width: 350px;
+        min-height: 60px;
+        padding: 14px 16px;
+        gap: 12px;
         font-size: 10px;
-        letter-spacing: 1px;
+        letter-spacing: .8px;
+      }
+
+      .main-button span {
+        width: 29px;
+        height: 29px;
       }
 
       .bottom-line {
@@ -384,8 +398,6 @@
         font-size: 8px;
         letter-spacing: .8px;
       }
-
-
     }
 
     @media (max-width: 360px) {
@@ -409,7 +421,7 @@
 
       h1 .place {
         font-size: .84em;
-        letter-spacing: -.075em;
+        letter-spacing: -.025em;
       }
 
       .bottom-line p {
@@ -465,7 +477,7 @@
         </p>
 
         <div class="actions">
-          <a class="main-button" href="start.html">
+          <a class="main-button" href="site.html">
             Entdecke die Kreisvereinigung
             <span aria-hidden="true">↗</span>
           </a>
