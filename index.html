@@ -2,1273 +2,153 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111111">
-
-  <title>Freie Wähler Dithmarschen – Politik. Von hier. Für morgen.</title>
-  <meta name="description" content="Freie Wähler Dithmarschen: regional verwurzelt, unabhängig im Denken und offen für Ideen. Lerne uns kennen und bring dich ein.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Freie Wähler Dithmarschen – engagiert für unsere Region.">
+  <title>Freie Wähler Dithmarschen</title>
 
   <style>
-    :root {
-      --orange: #ff6b00;
-      --orange-dark: #e85d00;
-      --black: #111111;
-      --white: #ffffff;
-      --light: #f3f2ef;
-      --muted: #666660;
-      --border: #deddd8;
-      --font: Arial, Helvetica, sans-serif;
-    }
-
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
     }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 25px;
     }
 
     body {
-      font-family: var(--font);
-      color: var(--black);
-      background: var(--white);
-      font-size: 16px;
-      line-height: 1.7;
-      -webkit-text-size-adjust: 100%;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid var(--orange);
-      outline-offset: 4px;
-    }
-
-    button,
-    input,
-    textarea {
-      font: inherit;
-    }
-
-    .topline {
-      height: 7px;
-      background: var(--orange);
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      padding: 19px 6%;
-      border-bottom: 1px solid #ecebe8;
-      background: var(--white);
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      text-transform: uppercase;
-      line-height: 1.25;
-      flex-shrink: 0;
-    }
-
-    .brand-mark {
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      flex-shrink: 0;
-      background: var(--orange);
-      color: var(--white);
-      font-size: 24px;
-      font-weight: 950;
-      transform: rotate(-5deg);
-    }
-
-    .brand-name {
-      font-size: 14px;
-      letter-spacing: -.2px;
-    }
-
-    .brand-name small {
-      display: block;
-      margin-top: 5px;
-      color: var(--muted);
-      font-size: 10px;
-      letter-spacing: 1px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .8px;
-      line-height: 1.5;
-      text-transform: uppercase;
-    }
-
-    nav a:not(.nav-button):hover {
-      color: var(--orange-dark);
-    }
-
-    .nav-button,
-    .main-button,
-    .contact-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      border: 0;
-      cursor: pointer;
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      line-height: 1.5;
-      text-transform: uppercase;
-      transition: background .2s, color .2s, transform .2s;
-    }
-
-    .nav-button {
-      padding: 13px 17px;
-      color: var(--white);
-      background: var(--black);
-    }
-
-    .nav-button:hover {
-      background: var(--orange);
-      transform: translateY(-1px);
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #222;
     }
 
     .hero {
-      position: relative;
-      isolation: isolate;
+      min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
-      min-height: 630px;
-      padding: 90px 8%;
-      overflow: hidden;
-      color: var(--white);
-      background: var(--black);
-    }
-
-    /* Das Hintergrundbild muss dithmarschen-hero.jpg heißen
-       und im selben Ordner wie diese index.html liegen. */
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -2;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      color: #fff;
       background:
-        linear-gradient(
-          90deg,
-          rgba(0,0,0,.91) 0%,
-          rgba(0,0,0,.76) 48%,
-          rgba(0,0,0,.35) 100%
-        ),
-        url("dithmarschen-hero.jpg") center / cover no-repeat;
-    }
-
-    .hero::after {
-      content: "D.";
-      position: absolute;
-      z-index: -1;
-      right: 3%;
-      bottom: -100px;
-      color: rgba(255,107,0,.15);
-      font-size: clamp(260px, 40vw, 520px);
-      font-weight: 950;
-      letter-spacing: -.1em;
-      line-height: 1;
-      pointer-events: none;
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
+        url("dithmarschen-hero.jpg") center/cover no-repeat;
     }
 
     .hero-content {
       width: 100%;
-      max-width: 1000px;
+      max-width: 850px;
     }
 
     .eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 24px;
-      color: var(--orange);
-      font-size: 11px;
-      font-weight: 900;
+      margin-bottom: 18px;
+      color: #ff8a00;
+      font-size: 0.95rem;
+      font-weight: bold;
       letter-spacing: 2px;
-      line-height: 1.6;
       text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 32px;
-      height: 4px;
-      flex-shrink: 0;
-      background: var(--orange);
     }
 
     h1 {
-      max-width: 1000px;
-      font-size: clamp(55px, 9vw, 118px);
-      font-weight: 950;
-      letter-spacing: -.035em;
-      line-height: 1.02;
-      text-transform: uppercase;
+      margin: 0 0 20px;
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      line-height: 1.08;
     }
 
-    h1 span {
-      display: block;
-      color: var(--orange);
+    .hero p {
+      max-width: 680px;
+      margin: 0 auto 32px;
+      font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+      line-height: 1.7;
     }
 
-    .hero-description {
-      max-width: 610px;
-      margin-top: 30px;
-      color: #e0e0db;
-      font-size: clamp(17px, 2vw, 21px);
-      line-height: 1.8;
+    .hero-button {
+      display: inline-block;
+      padding: 15px 28px;
+      border-radius: 6px;
+      background: #f58220;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 13px;
-      margin-top: 34px;
-    }
-
-    .main-button {
-      padding: 17px 21px;
-      color: var(--white);
-      background: var(--orange);
-    }
-
-    .main-button:hover {
-      background: var(--white);
-      color: var(--black);
+    .hero-button:hover {
+      background: #df6e0c;
       transform: translateY(-2px);
     }
 
-    .secondary-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 16px 20px;
-      border: 1px solid #777;
-      color: var(--white);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      line-height: 1.5;
-      text-transform: uppercase;
-      transition: background .2s, color .2s;
-    }
-
-    .secondary-button:hover {
-      color: var(--black);
-      background: var(--white);
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 33px;
-    }
-
-    .hero-tags span {
-      padding: 9px 12px;
-      border: 1px solid #505050;
-      color: #eeeeea;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .8px;
-      line-height: 1.6;
-      text-transform: uppercase;
-    }
-
-    .section {
-      padding: 90px 8%;
-    }
-
-    .section-heading {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: end;
-      gap: 40px;
-      margin-bottom: 44px;
-    }
-
-    .section-label {
-      margin-bottom: 16px;
-      color: var(--orange-dark);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 2px;
-      line-height: 1.6;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      font-size: clamp(37px, 5.5vw, 68px);
-      font-weight: 950;
-      letter-spacing: -.035em;
-      line-height: 1.07;
-      text-transform: uppercase;
-    }
-
-    h2 span {
-      color: var(--orange);
-    }
-
-    .section-intro {
-      max-width: 540px;
-      color: #555550;
-      font-size: 16px;
-      line-height: 1.8;
-    }
-
-    .about-strip {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 38px;
-    }
-
-    .about-card {
-      padding: 25px;
-      background: var(--light);
-      border-top: 4px solid var(--orange);
-    }
-
-    .about-card h3 {
-      margin-bottom: 10px;
-      font-size: 21px;
-      font-weight: 900;
-      letter-spacing: -.02em;
-      line-height: 1.3;
-      text-transform: uppercase;
-    }
-
-    .about-card p {
-      color: #555550;
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .text-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin-top: 18px;
-      padding-bottom: 4px;
-      border-bottom: 1px solid currentColor;
-      color: var(--orange-dark);
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .4px;
-      line-height: 1.6;
-    }
-
-    .text-link:hover {
-      color: var(--black);
-    }
-
-    .focus-section {
-      background: var(--light);
-    }
-
-    .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 15px;
-      margin-top: 40px;
-    }
-
-    .focus-card {
-      padding: 30px;
-      background: var(--white);
-      border-top: 5px solid var(--orange);
-    }
-
-    .focus-number {
-      color: var(--orange-dark);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: 1.4px;
-    }
-
-    .focus-card h3 {
-      margin-top: 19px;
-      font-size: clamp(22px, 3vw, 30px);
-      font-weight: 950;
-      letter-spacing: -.025em;
-      line-height: 1.25;
-      text-transform: uppercase;
-    }
-
-    .focus-card p {
-      margin-top: 12px;
-      color: #555550;
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .contact-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: start;
-      gap: 55px;
-    }
-
-    .contact-copy {
-      max-width: 540px;
-      margin-top: 20px;
-      color: #555550;
-      font-size: 16px;
-      line-height: 1.8;
-    }
-
-    .contact-panel {
-      padding: 32px;
-      color: var(--white);
-      background: var(--orange);
-    }
-
-    .contact-panel h3 {
-      font-size: 27px;
-      font-weight: 950;
-      letter-spacing: -.025em;
-      line-height: 1.25;
-      text-transform: uppercase;
-    }
-
-    .contact-panel p {
-      margin-top: 13px;
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .contact-button {
-      margin-top: 22px;
-      padding: 16px 20px;
-      color: var(--black);
-      background: var(--white);
-    }
-
-    .contact-button:hover {
-      color: var(--white);
-      background: var(--black);
-      transform: translateY(-1px);
-    }
-
-    .join-banner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 35px;
-      padding: 75px 8%;
-      color: var(--white);
-      background: var(--orange);
-    }
-
-    .join-banner h2 {
-      max-width: 760px;
-      font-size: clamp(37px, 5.5vw, 68px);
-      letter-spacing: -.035em;
-      line-height: 1.07;
-    }
-
-    .join-banner p {
-      max-width: 570px;
-      margin-top: 17px;
-      line-height: 1.8;
-    }
-
-    .join-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      gap: 12px;
-      padding: 17px 20px;
-      color: var(--black);
-      background: var(--white);
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .8px;
-      line-height: 1.5;
-      text-transform: uppercase;
-      transition: background .2s, color .2s, transform .2s;
-    }
-
-    .join-button:hover {
-      color: var(--white);
-      background: var(--black);
-      transform: translateY(-1px);
+    .hero-button:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 4px;
     }
 
     footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 22px;
-      padding: 32px 6%;
+      padding: 18px 15px;
+      text-align: center;
+      background: #171717;
+      color: #ddd;
+      font-size: 0.9rem;
     }
 
-    .footer-brand {
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .7px;
-      line-height: 1.6;
-      text-transform: uppercase;
+    footer a {
+      margin: 0 8px;
+      color: #fff;
+      text-decoration: none;
     }
 
-    .footer-brand span {
-      color: var(--orange);
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      font-size: 11px;
-      font-weight: 800;
-      line-height: 1.8;
-      text-transform: uppercase;
-    }
-
-    .footer-links a:hover {
-      color: var(--orange-dark);
-    }
-
-    .footer-note {
-      width: 100%;
-      color: var(--muted);
-      font-size: 11px;
-      line-height: 1.8;
-    }
-
-    /* Zugängliche Pop-up-Dialoge für Impressum und Datenschutz */
-    dialog.legal-dialog {
-      width: min(760px, calc(100% - 28px));
-      max-width: 760px;
-      max-height: 85vh;
-      max-height: 85dvh;
-      margin: auto;
-      padding: 0;
-      overflow: hidden;
-      border: 0;
-      color: var(--black);
-      background: var(--white);
-      box-shadow: 0 25px 90px rgba(0,0,0,.35);
-    }
-
-    dialog.legal-dialog::backdrop {
-      background: rgba(0,0,0,.78);
-      backdrop-filter: blur(3px);
-    }
-
-    .dialog-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 22px 25px;
-      color: var(--white);
-      background: var(--black);
-      border-top: 5px solid var(--orange);
-    }
-
-    .dialog-header h2 {
-      font-size: clamp(25px, 4vw, 36px);
-      letter-spacing: -.025em;
-      line-height: 1.15;
-    }
-
-    .dialog-close {
-      display: grid;
-      place-items: center;
-      width: 42px;
-      height: 42px;
-      flex-shrink: 0;
-      border: 1px solid #777;
-      color: var(--white);
-      background: transparent;
-      cursor: pointer;
-      font-size: 28px;
-      line-height: 1;
-    }
-
-    .dialog-close:hover {
-      color: var(--black);
-      background: var(--orange);
-      border-color: var(--orange);
-    }
-
-    .dialog-content {
-      max-height: calc(85vh - 90px);
-      max-height: calc(85dvh - 90px);
-      padding: 25px;
-      overflow-y: auto;
-      overscroll-behavior: contain;
-    }
-
-    .dialog-content h3 {
-      margin: 24px 0 8px;
-      font-size: 18px;
-      font-weight: 900;
-      line-height: 1.35;
-    }
-
-    .dialog-content h3:first-child {
-      margin-top: 0;
-    }
-
-    .dialog-content p,
-    .dialog-content li {
-      color: #44443f;
-      font-size: 15px;
-      line-height: 1.8;
-      overflow-wrap: anywhere;
-    }
-
-    .dialog-content ul {
-      padding-left: 22px;
-    }
-
-    .legal-warning {
-      padding: 15px;
-      border-left: 4px solid var(--orange);
-      background: var(--light);
-    }
-
-    .dialog-content a {
-      color: var(--orange-dark);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    body.dialog-open {
-      overflow: hidden;
-    }
-
-    @media (max-width: 900px) {
-      header {
-        align-items: flex-start;
-        flex-wrap: wrap;
-        padding: 18px 5%;
-      }
-
-      nav {
-        width: 100%;
-        gap: 12px 18px;
-      }
-
-      .hero {
-        min-height: 560px;
-        padding: 75px 6%;
-      }
-
-      .section {
-        padding: 75px 6%;
-      }
-
-      .section-heading {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .contact-section {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-
-      .join-banner {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 65px 6%;
-      }
+    footer a:hover {
+      color: #ff8a00;
     }
 
     @media (max-width: 600px) {
-      header {
-        gap: 16px;
-      }
-
-      .brand-name {
-        font-size: 12px;
-      }
-
-      .brand-name small {
-        font-size: 9px;
-        letter-spacing: .6px;
-      }
-
-      nav {
-        gap: 10px 15px;
-        font-size: 10px;
-      }
-
-      .nav-button {
-        padding: 11px 13px;
-      }
-
       .hero {
-        min-height: 0;
-        padding: 72px 6% 65px;
+        min-height: 90vh;
+        padding: 30px 18px;
       }
 
-      .hero::after {
-        right: -10%;
-        bottom: -45px;
-        font-size: 260px;
-      }
-
-      h1 {
-        font-size: clamp(47px, 12.5vw, 76px);
-        letter-spacing: -.025em;
-        line-height: 1.04;
-      }
-
-      .hero-description {
-        font-size: 17px;
-        line-height: 1.8;
-      }
-
-      .hero-actions {
-        align-items: stretch;
-        flex-direction: column;
-      }
-
-      .main-button,
-      .secondary-button {
+      .hero-button {
         width: 100%;
-        text-align: center;
+        max-width: 320px;
       }
 
-      .hero-tags span {
-        font-size: 9px;
-      }
-
-      .section {
-        padding: 62px 6%;
-      }
-
-      h2 {
-        font-size: clamp(35px, 9vw, 53px);
-        letter-spacing: -.025em;
-        line-height: 1.08;
-      }
-
-      .section-intro,
-      .about-card p,
-      .focus-card p,
-      .contact-copy {
-        font-size: 16px;
-        line-height: 1.8;
-      }
-
-      .about-strip,
-      .focus-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .about-card,
-      .focus-card {
-        padding: 25px;
-      }
-
-      .focus-card h3 {
-        font-size: clamp(22px, 6vw, 29px);
-        letter-spacing: -.015em;
-        line-height: 1.3;
-      }
-
-      .contact-panel {
-        padding: 25px;
-      }
-
-      .join-banner {
-        padding: 58px 6%;
-      }
-
-      .join-banner h2 {
-        font-size: clamp(35px, 9vw, 55px);
-        letter-spacing: -.025em;
-        line-height: 1.08;
-      }
-
-      .join-button {
-        width: 100%;
-      }
-
-      footer {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 28px 6%;
-      }
-
-      .footer-links {
-        gap: 12px 17px;
-      }
-
-      .dialog-header {
-        padding: 17px;
-      }
-
-      .dialog-content {
-        padding: 19px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        transition: none !important;
+      footer a {
+        display: inline-block;
+        margin: 6px;
       }
     }
   </style>
 </head>
 
 <body>
-  <div class="topline"></div>
-
-  <header>
-    <a class="brand" href="index.html" aria-label="Zur Startseite">
-      <span class="brand-mark" aria-hidden="true">F</span>
-      <span class="brand-name">
-        Freie Wähler
-        <small>Kreisvereinigung Dithmarschen</small>
-      </span>
-    </a>
-
-    <nav aria-label="Hauptnavigation">
-      <a href="#ueber-uns">Über uns</a>
-      <a href="#themen">Themen</a>
-      <a href="#kontakt">Kontakt</a>
-      <a href="site.html" class="nav-button">Kreisvereinigung ↗</a>
-    </nav>
-  </header>
-
   <main>
-    <section class="hero" id="start">
+    <section class="hero">
       <div class="hero-content">
         <div class="eyebrow">Freie Wähler Dithmarschen</div>
 
-        <h1>
-          Politik.
-          <span>Von hier.</span>
-          Für morgen.
-        </h1>
+        <h1>Unsere Heimat.<br>Unsere Verantwortung.</h1>
 
-        <p class="hero-description">
-          Unsere Region liegt uns am Herzen. Wir möchten zuhören,
-          Ideen aufgreifen und uns für eine bürgernahe Politik
-          in Dithmarschen einsetzen.
-        </p>
-
-        <div class="hero-actions">
-          <a href="site.html" class="main-button">
-            Die Kreisvereinigung kennenlernen <span aria-hidden="true">↗</span>
-          </a>
-
-          <a href="#ueber-uns" class="secondary-button">
-            Mehr erfahren ↓
-          </a>
-        </div>
-
-        <div class="hero-tags">
-          <span>Regional verwurzelt</span>
-          <span>Unabhängig im Denken</span>
-          <span>Offen für Ideen</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="ueber-uns">
-      <div class="section-heading">
-        <div>
-          <div class="section-label">Unsere Haltung</div>
-          <h2>Politik muss <span>vor Ort</span> beginnen.</h2>
-        </div>
-
-        <p class="section-intro">
-          Dithmarschen ist vielfältig. Die Menschen, Gemeinden und
-          Herausforderungen unserer Region verdienen Aufmerksamkeit,
-          verständliche Entscheidungen und einen offenen Austausch.
-          Wir möchten dazu einladen, gemeinsam über die Zukunft
-          unserer Heimat zu sprechen.
-        </p>
-      </div>
-
-      <div class="about-strip">
-        <article class="about-card">
-          <h3>Bürgernah</h3>
-          <p>
-            Zuhören, Fragen ernst nehmen und Anliegen aus dem Alltag
-            in politische Gespräche einbringen.
-          </p>
-        </article>
-
-        <article class="about-card">
-          <h3>Unabhängig</h3>
-          <p>
-            Sachfragen diskutieren, unterschiedliche Perspektiven
-            berücksichtigen und Entscheidungen nachvollziehbar machen.
-          </p>
-        </article>
-
-        <article class="about-card">
-          <h3>Regional</h3>
-          <p>
-            Die Besonderheiten Dithmarschens verstehen und die
-            Entwicklung unserer Städte und Gemeinden im Blick behalten.
-          </p>
-        </article>
-      </div>
-
-      <a href="site.html" class="text-link">
-        Mehr über die Kreisvereinigung erfahren <span aria-hidden="true">↗</span>
-      </a>
-    </section>
-
-    <section class="section focus-section" id="themen">
-      <div class="section-heading">
-        <div>
-          <div class="section-label">Was uns beschäftigt</div>
-          <h2>Unsere Region.<br><span>Unsere Zukunft.</span></h2>
-        </div>
-
-        <p class="section-intro">
-          Welche Themen sind für Dithmarschen besonders wichtig?
-          Wir möchten darüber ins Gespräch kommen und regionale
-          Anliegen sichtbar machen.
-        </p>
-      </div>
-
-      <div class="focus-grid">
-        <article class="focus-card">
-          <div class="focus-number">THEMA / 01</div>
-          <h3>Starke Gemeinden</h3>
-          <p>
-            Lebenswerte Orte, engagierte Menschen und gute
-            Rahmenbedingungen für das Zusammenleben vor Ort.
-          </p>
-        </article>
-
-        <article class="focus-card">
-          <div class="focus-number">THEMA / 02</div>
-          <h3>Natur &amp; Landschaft</h3>
-          <p>
-            Dithmarschens Landschaft bewahren und die Zukunft unserer
-            natürlichen Lebensgrundlagen im Blick behalten.
-          </p>
-        </article>
-
-        <article class="focus-card">
-          <div class="focus-number">THEMA / 03</div>
-          <h3>Leben im ländlichen Raum</h3>
-          <p>
-            Die Bedürfnisse von Familien, Vereinen, Ehrenamt und
-            Menschen in kleineren Gemeinden ernst nehmen.
-          </p>
-        </article>
-
-        <article class="focus-card">
-          <div class="focus-number">THEMA / 04</div>
-          <h3>Gemeinsam gestalten</h3>
-          <p>
-            Ideen sammeln, miteinander diskutieren und nach
-            praktikablen Lösungen für die Region suchen.
-          </p>
-        </article>
-      </div>
-
-      <p style="margin-top:20px;color:#666660;font-size:12px;line-height:1.8">
-        Hinweis: Diese Themenbeschreibungen sind allgemeine Formulierungen
-        und sollten vor Veröffentlichung mit den tatsächlich beschlossenen
-        Positionen der Kreisvereinigung abgeglichen werden.
-      </p>
-    </section>
-
-    <section class="section contact-section" id="kontakt">
-      <div>
-        <div class="section-label">Der direkte Draht</div>
-        <h2>Fragen?<br><span>Ideen?</span></h2>
-
-        <p class="contact-copy">
-          Du möchtest mehr erfahren, ein Anliegen ansprechen oder
-          herausfinden, wie du dich einbringen kannst? Wir freuen uns
-          auf den Austausch. Die offiziellen Kontaktdaten müssen vor
-          Veröffentlichung ergänzt werden.
-        </p>
-      </div>
-
-      <div class="contact-panel">
-        <h3>Lass uns reden.</h3>
         <p>
-          Nimm Kontakt mit der Kreisvereinigung auf und teile uns
-          dein Anliegen mit.
+          Unabhängig, bürgernah und engagiert für Dithmarschen.
+          Gemeinsam möchten wir unsere Region gestalten und die
+          Anliegen der Menschen vor Ort in den Mittelpunkt stellen.
         </p>
 
-        <!-- Echte E-Mail-Adresse einsetzen, bevor du den Link nutzt. -->
-        <a class="contact-button" href="mailto:KONTAKTADRESSE-HIER-EINTRAGEN">
-          E-Mail schreiben ↗
+        <a class="hero-button" href="site.html">
+          Unsere Arbeit kennenlernen →
         </a>
       </div>
-    </section>
-
-    <section class="join-banner">
-      <div>
-        <div class="eyebrow" style="color:#fff">Mach mit</div>
-        <h2>Dithmarschen ist, was wir daraus machen.</h2>
-        <p>
-          Gute Gespräche beginnen mit einer Frage. Lerne die
-          Kreisvereinigung kennen und bring deine Perspektive ein.
-        </p>
-      </div>
-
-      <a href="site.html" class="join-button">
-        Jetzt kennenlernen <span aria-hidden="true">↗</span>
-      </a>
     </section>
   </main>
 
   <footer>
-    <div class="footer-brand">
-      Freie Wähler <span>/</span> Dithmarschen
-    </div>
-
-    <div class="footer-links">
-      <a href="index.html">Startseite</a>
-      <a href="site.html">Kreisvereinigung</a>
-      <a href="#kontakt">Kontakt</a>
-      <a href="#impressum" data-legal-open="impressum">Impressum</a>
-      <a href="#datenschutz" data-legal-open="datenschutz">Datenschutz</a>
-    </div>
-
-    <p class="footer-note">
-      Bitte ergänze vor Veröffentlichung die offiziellen Betreiber- und
-      Kontaktdaten und prüfe die rechtlichen Angaben. Die folgenden
-      Pop-ups sind Vorlagen, keine fertigen Rechtstexte.
-    </p>
+    <a href="site.html">Über uns</a>
+    <a href="site.html#kontakt">Kontakt</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="datenschutz.html">Datenschutz</a>
+    <p>© Freie Wähler Dithmarschen</p>
   </footer>
-
-  <!-- IMPRESSUM-POP-UP
-       Platzhalter bitte vor Veröffentlichung ersetzen. -->
-  <dialog class="legal-dialog" id="impressum" aria-labelledby="impressum-title">
-    <div class="dialog-header">
-      <h2 id="impressum-title">Impressum</h2>
-      <button class="dialog-close" type="button" data-legal-close aria-label="Impressum schließen">×</button>
-    </div>
-
-    <div class="dialog-content">
-      <p class="legal-warning">
-        <strong>Vor Veröffentlichung ausfüllen:</strong>
-        Die Angaben unten sind Platzhalter. Bitte die zuständige
-        Organisation, ladungsfähige Anschrift und Kontaktmöglichkeiten
-        korrekt eintragen und rechtlich prüfen.
-      </p>
-
-      <h3>Angaben zum Betreiber</h3>
-      <p>
-        [Vollständiger Name der verantwortlichen Organisation oder Person]<br>
-        [Straße und Hausnummer]<br>
-        [Postleitzahl und Ort]<br>
-        Deutschland
-      </p>
-
-      <h3>Vertretungsberechtigte Person</h3>
-      <p>
-        [Vollständiger Name und Funktion der vertretungsberechtigten Person]
-      </p>
-
-      <h3>Kontakt</h3>
-      <p>
-        E-Mail: [Offizielle E-Mail-Adresse]<br>
-        Telefon: [Telefonnummer, sofern vorhanden]
-      </p>
-
-      <h3>Weitere Angaben</h3>
-      <p>
-        [Falls zutreffend: Angaben zu Register, Registernummer,
-        Umsatzsteuer-ID oder weiteren gesetzlich erforderlichen Angaben.]
-      </p>
-
-      <h3>Verantwortlich für den Inhalt</h3>
-      <p>
-        [Name und Anschrift der inhaltlich verantwortlichen Person,
-        sofern gesetzlich erforderlich.]
-      </p>
-
-      <h3>Hinweis</h3>
-      <p>
-        Dieses Muster ist keine Rechtsberatung. Prüfe, welche Angaben
-        für die tatsächliche Betreiberstruktur dieser Website gesetzlich
-        erforderlich sind.
-      </p>
-    </div>
-  </dialog>
-
-  <!-- DATENSCHUTZ-POP-UP
-       Inhalt muss anhand der tatsächlichen Website-Datenverarbeitung
-       ergänzt und geprüft werden. -->
-  <dialog class="legal-dialog" id="datenschutz" aria-labelledby="datenschutz-title">
-    <div class="dialog-header">
-      <h2 id="datenschutz-title">Datenschutz</h2>
-      <button class="dialog-close" type="button" data-legal-close aria-label="Datenschutzerklärung schließen">×</button>
-    </div>
-
-    <div class="dialog-content">
-      <p class="legal-warning">
-        <strong>Vor Veröffentlichung prüfen:</strong>
-        Dieser Text ist nur eine Grundstruktur. Er ist keine vollständige
-        Datenschutzerklärung. Ergänze die tatsächlichen Datenverarbeitungen,
-        Hosting-Informationen und Kontaktangaben.
-      </p>
-
-      <h3>1. Verantwortliche Stelle</h3>
-      <p>
-        Verantwortlich für die Verarbeitung personenbezogener Daten ist:<br>
-        [Vollständiger Name der verantwortlichen Organisation]<br>
-        [Anschrift]<br>
-        E-Mail: [Datenschutz- oder Kontakt-E-Mail]
-      </p>
-
-      <h3>2. Aufruf der Website</h3>
-      <p>
-        Beim Aufruf einer Website können durch den Hosting-Anbieter
-        technisch erforderliche Daten in Server-Protokollen verarbeitet
-        werden. Welche Daten dabei konkret erfasst werden, wie lange
-        sie gespeichert werden und auf welcher Rechtsgrundlage dies
-        erfolgt, muss anhand der tatsächlichen Hosting-Konfiguration
-        und der Informationen des Anbieters ergänzt werden.
-      </p>
-
-      <h3>3. Hosting über GitHub Pages</h3>
-      <p>
-        Diese Website wird derzeit über GitHub Pages veröffentlicht.
-        Beim Besuch können technische Informationen durch den Hosting-
-        Dienst verarbeitet werden. Bitte prüfe die aktuellen Informationen
-        und Bedingungen des Anbieters und ergänze die erforderlichen
-        Angaben zur Datenverarbeitung, Rechtsgrundlage, Speicherdauer
-        und zu möglichen Übermittlungen in Drittländer.
-      </p>
-      <p>
-        Informationen des Anbieters:
-        <a href="https://docs.github.com/en/pages"
-           target="_blank" rel="noopener noreferrer">GitHub Pages Dokumentation</a>
-      </p>
-
-      <h3>4. Kontaktaufnahme</h3>
-      <p>
-        Wenn du uns per E-Mail kontaktierst, werden die von dir
-        übermittelten Informationen verarbeitet, um deine Anfrage
-        zu bearbeiten. Ergänze hier die konkrete verantwortliche Stelle,
-        die geltende Rechtsgrundlage und die Speicherfristen.
-      </p>
-
-      <h3>5. Cookies und externe Dienste</h3>
-      <p>
-        Prüfe, ob die Website Cookies, Analysewerkzeuge, eingebettete
-        Inhalte, externe Schriftarten, Karten, Videos oder andere
-        Drittanbieter-Dienste verwendet. Die Erklärung muss die tatsächlich
-        eingesetzten Dienste beschreiben. Nicht verwendete Dienste
-        dürfen nicht als tatsächlich eingesetzt dargestellt werden.
-      </p>
-
-      <h3>6. Deine Rechte</h3>
-      <p>
-        Betroffene Personen können – soweit die gesetzlichen Voraussetzungen
-        erfüllt sind – Rechte auf Auskunft, Berichtigung, Löschung,
-        Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch
-        geltend machen. Außerdem kann ein Beschwerderecht bei einer
-        zuständigen Datenschutzaufsichtsbehörde bestehen.
-      </p>
-
-      <h3>7. Aktualität dieser Erklärung</h3>
-      <p>
-        [Datum der letzten Aktualisierung ergänzen. Den Text vor
-        Veröffentlichung an die tatsächliche Website und ihre
-        Datenverarbeitung anpassen.]
-      </p>
-    </div>
-  </dialog>
-
-  <script>
-    (() => {
-      const dialogs = document.querySelectorAll(".legal-dialog");
-      const openButtons = document.querySelectorAll("[data-legal-open]");
-      const closeButtons = document.querySelectorAll("[data-legal-close]");
-
-      function openDialog(id) {
-        const dialog = document.getElementById(id);
-        if (!dialog) return;
-
-        if (typeof dialog.showModal === "function") {
-          if (!dialog.open) dialog.showModal();
-          document.body.classList.add("dialog-open");
-        }
-      }
-
-      function closeDialog(dialog) {
-        if (dialog && dialog.open) dialog.close();
-      }
-
-      openButtons.forEach((button) => {
-        button.addEventListener("click", (event) => {
-          event.preventDefault();
-          openDialog(button.dataset.legalOpen);
-        });
-      });
-
-      closeButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          closeDialog(button.closest("dialog"));
-        });
-      });
-
-      dialogs.forEach((dialog) => {
-        dialog.addEventListener("click", (event) => {
-          if (event.target === dialog) {
-            closeDialog(dialog);
-          }
-        });
-
-        dialog.addEventListener("close", () => {
-          if (![...dialogs].some((item) => item.open)) {
-            document.body.classList.remove("dialog-open");
-          }
-        });
-      });
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-          document.body.classList.remove("dialog-open");
-        }
-      });
-    })();
-  </script>
 </body>
 </html>
