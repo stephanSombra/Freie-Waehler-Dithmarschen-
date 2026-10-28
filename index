@@ -1,0 +1,484 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff6b00">
+
+  <title>Freie Wähler Dithmarschen – Dithmarschen. Mehr als Platt.</title>
+  <meta name="description" content="Freie Wähler Kreisvereinigung Dithmarschen. Unsere Heimat. Unsere Zukunft.">
+
+  <style>
+    :root {
+      --orange: #ff6b00;
+      --white: #ffffff;
+      --black: #111111;
+      --font: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      font-family: var(--font);
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topline {
+      height: 7px;
+      background: var(--orange);
+    }
+
+    header {
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 100%;
+      z-index: 5;
+      padding: 27px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: var(--orange);
+      font-size: 25px;
+      font-weight: 950;
+      transform: rotate(-5deg);
+    }
+
+    .brand-name {
+      font-size: 15px;
+      font-weight: 950;
+      letter-spacing: -.4px;
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
+
+    .brand-name span {
+      display: block;
+      margin-top: 5px;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.7px;
+      color: rgba(255,255,255,.75);
+    }
+
+    .header-label {
+      flex-shrink: 0;
+      color: rgba(255,255,255,.85);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: calc(100svh - 7px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding: 140px 8% 105px;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(10, 12, 10, .88) 0%,
+          rgba(10, 12, 10, .66) 48%,
+          rgba(10, 12, 10, .18) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(0,0,0,.4),
+          transparent 45%
+        ),
+        url("dithmarschen-hero.jpg") center / cover no-repeat,
+        #343b32;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      width: 13px;
+      height: 100%;
+      background: var(--orange);
+    }
+
+
+
+    .hero-content {
+      width: 100%;
+      max-width: 1150px;
+      min-width: 0;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 30px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 2.6px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 38px;
+      height: 4px;
+      flex-shrink: 0;
+      background: var(--orange);
+    }
+
+    h1 {
+      width: 100%;
+      max-width: 100%;
+      font-size: clamp(38px, 8.2vw, 112px);
+      line-height: .88;
+      letter-spacing: -.075em;
+      font-weight: 950;
+      text-transform: uppercase;
+      overflow-wrap: normal;
+      word-break: normal;
+    }
+
+    h1 .place {
+      display: block;
+      white-space: nowrap;
+      font-size: .91em;
+    }
+
+    h1 .accent {
+      display: block;
+      margin-top: 15px;
+      color: var(--orange);
+    }
+
+    .subtitle {
+      margin-top: 35px;
+      max-width: 560px;
+      color: rgba(255,255,255,.9);
+      font-size: clamp(17px, 2vw, 23px);
+      line-height: 1.5;
+    }
+
+    .subtitle strong {
+      color: var(--white);
+    }
+
+    .actions {
+      margin-top: 35px;
+    }
+
+    .main-button {
+      min-height: 59px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      padding: 19px 25px;
+      color: var(--white);
+      background: var(--orange);
+      font-size: 11px;
+      font-weight: 950;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: background .2s, transform .2s;
+    }
+
+    .main-button:hover {
+      background: #e85d00;
+      transform: translateY(-3px);
+    }
+
+    .main-button span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border: 1px solid rgba(255,255,255,.55);
+      border-radius: 50%;
+      font-size: 18px;
+      line-height: 1;
+      transition: transform .2s, background .2s, border-color .2s;
+    }
+
+    .main-button:hover span {
+      transform: translate(2px, -2px);
+      background: rgba(255,255,255,.16);
+      border-color: rgba(255,255,255,.9);
+    }
+
+    .bottom-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      min-height: 65px;
+      padding: 20px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background: rgba(10,10,10,.64);
+      border-top: 1px solid rgba(255,255,255,.16);
+    }
+
+    .bottom-line p {
+      color: rgba(255,255,255,.8);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    .bottom-line strong {
+      color: var(--orange);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        padding-left: 7%;
+        padding-right: 7%;
+      }
+
+      h1 {
+        font-size: clamp(38px, 8.2vw, 88px);
+      }
+    }
+
+    @media (max-width: 650px) {
+      header {
+        padding: 22px 6%;
+      }
+
+      .brand {
+        gap: 9px;
+      }
+
+      .brand-mark {
+        width: 37px;
+        height: 37px;
+        font-size: 22px;
+      }
+
+      .brand-name {
+        font-size: 12px;
+      }
+
+      .brand-name span {
+        font-size: 8px;
+        letter-spacing: 1px;
+      }
+
+      .header-label {
+        max-width: 95px;
+        font-size: 8px;
+        line-height: 1.6;
+        letter-spacing: 1px;
+      }
+
+      .hero {
+        min-height: 100svh;
+        padding: 125px 6% 115px;
+        background-image:
+          linear-gradient(
+            90deg,
+            rgba(10, 12, 10, .83),
+            rgba(10, 12, 10, .48)
+          ),
+          linear-gradient(
+            0deg,
+            rgba(0,0,0,.45),
+            transparent 50%
+          ),
+          url("dithmarschen-hero.jpg");
+        background-color: #343b32;
+        background-position: center;
+      }
+
+      h1 {
+        font-size: clamp(34px, 9.5vw, 62px);
+        letter-spacing: -.065em;
+        line-height: .9;
+      }
+
+      h1 .place {
+        font-size: .88em;
+        letter-spacing: -.07em;
+      }
+
+      h1 .accent {
+        margin-top: 12px;
+      }
+
+      .eyebrow {
+        font-size: 9px;
+        letter-spacing: 1.8px;
+        margin-bottom: 25px;
+      }
+
+      .subtitle {
+        margin-top: 28px;
+        font-size: 17px;
+      }
+
+      .actions {
+        margin-top: 30px;
+      }
+
+      .main-button {
+        width: 100%;
+        max-width: 330px;
+        padding: 18px 15px;
+        gap: 14px;
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+
+      .bottom-line {
+        padding: 18px 6%;
+        gap: 12px;
+      }
+
+      .bottom-line p {
+        font-size: 8px;
+        letter-spacing: .8px;
+      }
+
+
+    }
+
+    @media (max-width: 360px) {
+      .header-label {
+        max-width: 78px;
+        font-size: 7px;
+      }
+
+      .brand-name {
+        font-size: 10px;
+      }
+
+      .brand-name span {
+        font-size: 7px;
+        letter-spacing: .6px;
+      }
+
+      h1 {
+        font-size: 9.5vw;
+      }
+
+      h1 .place {
+        font-size: .84em;
+        letter-spacing: -.075em;
+      }
+
+      .bottom-line p {
+        font-size: 7px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topline"></div>
+
+  <header>
+    <a class="brand" href="index.html" aria-label="Freie Wähler Dithmarschen">
+      <div class="brand-mark" aria-hidden="true">F</div>
+
+      <div class="brand-name">
+        Freie Wähler
+        <span>Kreisvereinigung Dithmarschen</span>
+      </div>
+    </a>
+
+    <div class="header-label">
+      Unabhängig.<br>
+      Regional. Mittendrin.
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          Für unsere Region
+        </div>
+
+        <h1>
+          <span class="place">Dithmarschen.</span>
+          <span class="accent">Mehr als Platt.</span>
+        </h1>
+
+        <p class="subtitle">
+          <strong>Unsere Heimat. Unsere Zukunft.</strong><br>
+          Zeit, gemeinsam nach vorn zu denken.
+        </p>
+
+        <div class="actions">
+          <a class="main-button" href="start.html">
+            Entdecke die Kreisvereinigung
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div class="bottom-line">
+    <p><strong>Freie Wähler</strong> / Dithmarschen</p>
+    <p>Heimat gestalten. Zukunft bewegen.</p>
+  </div>
+</body>
+</html>
