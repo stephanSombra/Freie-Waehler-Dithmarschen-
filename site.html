@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -7,13 +6,19 @@
   <meta name="theme-color" content="#f56608">
 
   <title>Die Kreisvereinigung – Freie Wähler Dithmarschen</title>
-  <meta name="description" content="Wer wir sind, wofür wir stehen und wie du dich bei den Freien Wählern in Dithmarschen einbringen kannst.">
+  <meta name="description" content="Lerne die Freie Wähler Kreisvereinigung Dithmarschen, ihren Vorstand, ihre Themen und Möglichkeiten zur Mitarbeit kennen.">
 
-  <!-- Vor Veröffentlichung: eigene Social-Media-Vorschaubilder und ein Favicon ergänzen. -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
   <meta property="og:title" content="Freie Wähler Dithmarschen – Politik. Von hier. Für morgen.">
-  <meta property="og:description" content="Unsere Heimat. Unsere Zukunft. Lerne die Kreisvereinigung kennen.">
+  <meta property="og:description" content="Unsere Heimat. Unsere Zukunft. Lerne die Kreisvereinigung und ihren Vorstand kennen.">
+
+  <!-- Nach Einrichtung der endgültigen Domain ergänzen -->
+  <!-- <meta property="og:url" content="DEINE-WEBSITE-URL"> -->
+  <!-- <meta property="og:image" content="ABSOLUTE-URL-ZUM-VORSCHAUBILD"> -->
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico">
 
   <style>
     :root {
@@ -111,17 +116,14 @@
       line-height: 1.2;
     }
 
-    .brand-mark {
-      width: 42px;
-      height: 42px;
+    /* Eigenes Logo der Kreisvereinigung */
+    .brand-logo {
+      display: block;
+      width: auto;
+      height: 52px;
+      max-width: 150px;
+      object-fit: contain;
       flex-shrink: 0;
-      display: grid;
-      place-items: center;
-      background: var(--orange);
-      color: var(--black);
-      font-size: 24px;
-      font-weight: 950;
-      transform: rotate(-5deg);
     }
 
     .brand-name {
@@ -404,7 +406,7 @@
       line-height: 1.8;
     }
 
-    /* Vorstand */
+    /* Vorstand mit vorbereiteten Bildfeldern */
 
     .board-grid {
       display: grid;
@@ -414,6 +416,7 @@
     }
 
     .board-card {
+      min-width: 0;
       min-height: 190px;
       padding: 22px;
       display: flex;
@@ -421,6 +424,16 @@
       justify-content: space-between;
       background: var(--light);
       border-bottom: 4px solid var(--orange);
+    }
+
+    .board-photo {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      margin-bottom: 18px;
+      object-fit: cover;
+      object-position: center 35%;
+      background: #e5e3de;
     }
 
     .board-role {
@@ -733,10 +746,9 @@
         gap: 9px;
       }
 
-      .brand-mark {
-        width: 38px;
-        height: 38px;
-        font-size: 22px;
+      .brand-logo {
+        height: 42px;
+        max-width: 90px;
       }
 
       .brand-name {
@@ -868,6 +880,11 @@
         padding: 17px;
       }
 
+      .board-photo {
+        aspect-ratio: 3 / 4;
+        margin-bottom: 14px;
+      }
+
       .board-card h3 {
         font-size: 18px;
         line-height: 1.35;
@@ -980,6 +997,10 @@
         min-height: 145px;
         padding: 20px;
       }
+
+      .board-photo {
+        aspect-ratio: 4 / 3;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -1003,7 +1024,15 @@
   <header>
     <a class="brand" href="index.html"
        aria-label="Freie Wähler Dithmarschen – Startseite">
-      <div class="brand-mark" aria-hidden="true">F</div>
+
+      <!-- Eigenes Logo der Kreisvereinigung -->
+      <img
+        class="brand-logo"
+        src="images/logo-dithmarschen.jpg"
+        alt="Logo der Freien Wähler – Kreisvereinigung Dithmarschen"
+        width="150"
+        height="52"
+      >
 
       <div class="brand-name">
         Freie Wähler
@@ -1107,8 +1136,8 @@
             <p>
               Unser Blick richtet sich auf den gesamten Kreis Dithmarschen:
               auf Städte, Gemeinden, den ländlichen Raum, die Küste und
-              die Menschen, die unsere Region prägen. Lokale Ansprechpartner
-              und konkrete Aktivitäten werden ergänzt, sobald sie feststehen.
+              die Menschen, die unsere Region prägen. Über unsere Arbeit
+              und Aktivitäten informieren wir auf dieser Website.
             </p>
           </div>
         </article>
@@ -1141,9 +1170,8 @@
 
         <p class="section-intro">
           Gute Politik beginnt mit konkreten Fragen. Diese Themenfelder
-          können die Grundlage für unsere Arbeit bilden. Die endgültigen
-          Positionen und Forderungen werden von der Kreisvereinigung geprüft
-          und beschlossen.
+          zeigen, womit wir uns beschäftigen. Konkrete Positionen und
+          Forderungen werden von der Kreisvereinigung abgestimmt.
         </p>
       </div>
 
@@ -1194,46 +1222,78 @@
         </div>
 
         <p class="section-intro">
-          Eine transparente Anlaufstelle für Mitglieder, Interessierte
-          und Menschen mit Ideen für Dithmarschen. Hier werden die
-          Vorstandsmitglieder mit ihren Funktionen und offiziellen
-          Kontaktdaten vorgestellt.
+          Hier stellen wir die Verantwortlichen der Kreisvereinigung vor.
+          Du findest ihre Funktionen und kannst über die offiziellen
+          Kontaktdaten mit der Kreisvereinigung ins Gespräch kommen.
         </p>
       </div>
 
-      <!-- TODO: Namen und Funktionen anhand der aktuellen Besetzung ergänzen. -->
-      <!-- Vor Veröffentlichung Einwilligungen für Fotos und persönliche Kontaktdaten prüfen. -->
+      <!-- Die vier Bilddateien können nach dem Hochladen eingebunden werden.
+           Vor Veröffentlichung die Nutzungsrechte und Einwilligungen für
+           die verwendeten Porträtfotos prüfen. -->
 
       <div class="board-grid">
         <article class="board-card">
-          <div class="board-role">1. Vorsitz</div>
+          <img
+            class="board-photo"
+            src="images/vorstand-01.jpg"
+            alt="Porträt von Andreas Wendt, Kreisvorsitzender der Freien Wähler Dithmarschen"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="board-role">Kreisvorsitzender</div>
           <div>
-            <h3>[Name ergänzen]</h3>
+            <h3>Andreas Wendt</h3>
             <p>Vorsitz der Kreisvereinigung</p>
           </div>
         </article>
 
         <article class="board-card">
-          <div class="board-role">2. Vorsitz</div>
+          <img
+            class="board-photo"
+            src="images/vorstand-02.jpg"
+            alt="Porträt von Michael Potthast, stellvertretender Kreisvorsitzender"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="board-role">Stellvertretender Kreisvorsitzender</div>
           <div>
-            <h3>[Name ergänzen]</h3>
+            <h3>Michael Potthast</h3>
             <p>Stellvertretender Vorsitz</p>
           </div>
         </article>
 
         <article class="board-card">
-          <div class="board-role">Finanzen</div>
+          <img
+            class="board-photo"
+            src="images/vorstand-03.jpg"
+            alt="Porträt von Stephan Schulz, Kreisschatzmeister"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="board-role">Kreisschatzmeister</div>
           <div>
-            <h3>[Name ergänzen]</h3>
-            <p>Schatzmeister/in</p>
+            <h3>Stephan Schulz</h3>
+            <p>Finanzen der Kreisvereinigung</p>
           </div>
         </article>
 
         <article class="board-card">
-          <div class="board-role">Organisation</div>
+          <img
+            class="board-photo"
+            src="images/vorstand-04.jpg"
+            alt="Porträt von Michel Benart, Kreisschriftführer"
+            width="600"
+            height="800"
+            loading="lazy"
+          >
+          <div class="board-role">Kreisschriftführer</div>
           <div>
-            <h3>[Name ergänzen]</h3>
-            <p>Schriftführung / weitere Funktion</p>
+            <h3>Michel Benart</h3>
+            <p>Schriftführung der Kreisvereinigung</p>
           </div>
         </article>
       </div>
@@ -1248,35 +1308,21 @@
 
         <p class="section-intro">
           Sitzungen, Gespräche, Veranstaltungen und öffentliche Termine:
-          Hier finden Interessierte die nächsten bestätigten Möglichkeiten,
-          die Kreisvereinigung persönlich kennenzulernen.
+          Hier informieren wir über bestätigte Möglichkeiten, die
+          Kreisvereinigung persönlich kennenzulernen.
         </p>
       </div>
 
-      <!-- TODO: Ausschließlich bestätigte Termine veröffentlichen. -->
-
+      <!-- Termine erst eintragen, wenn Datum, Ort und Uhrzeit bestätigt sind. -->
       <div class="events-list">
         <article class="event">
-          <div class="event-date">[Datum ergänzen]</div>
+          <div class="event-date">Termine folgen</div>
           <div>
-            <h3>[Veranstaltung ergänzen]</h3>
-            <p>[Uhrzeit, Ort und Informationen ergänzen]</p>
-          </div>
-        </article>
-
-        <article class="event">
-          <div class="event-date">[Datum ergänzen]</div>
-          <div>
-            <h3>[Veranstaltung ergänzen]</h3>
-            <p>[Uhrzeit, Ort und Informationen ergänzen]</p>
-          </div>
-        </article>
-
-        <article class="event">
-          <div class="event-date">[Datum ergänzen]</div>
-          <div>
-            <h3>[Veranstaltung ergänzen]</h3>
-            <p>[Uhrzeit, Ort und Informationen ergänzen]</p>
+            <h3>Weitere Informationen folgen</h3>
+            <p>
+              Sobald neue öffentliche Termine feststehen, werden sie
+              hier veröffentlicht.
+            </p>
           </div>
         </article>
       </div>
@@ -1305,23 +1351,38 @@
         <div class="contact-details">
           <p>
             <strong>E-Mail:</strong><br>
-            [Offizielle E-Mail-Adresse ergänzen]
+            <a href="mailto:kv-dithmarschen@sh.freiewaehler.eu">
+              kv-dithmarschen@sh.freiewaehler.eu
+            </a>
+          </p>
+
+          <p>
+            <strong>Telefon:</strong><br>
+            <a href="tel:+491604214488">0160 4214488</a>
           </p>
 
           <p>
             <strong>Postanschrift:</strong><br>
-            [Offizielle Anschrift ergänzen]
+            Freie Wähler – Kreisvereinigung Dithmarschen<br>
+            Torfweg 12<br>
+            25795 Weddingstedt
           </p>
 
           <p>
-            <strong>Social Media:</strong><br>
-            [Offizielle Profile ergänzen]
+            <strong>Instagram:</strong><br>
+            <a
+              href="https://www.instagram.com/freiewaehler_dithmarschen/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >@freiewaehler_dithmarschen</a>
           </p>
         </div>
 
-        <!-- TODO: Nach Eintragung der offiziellen E-Mail-Adresse einen mailto:-Link ergänzen. -->
-        <a class="contact-button" href="#kontakt">
-          Kontaktdaten ansehen
+        <a
+          class="contact-button"
+          href="mailto:kv-dithmarschen@sh.freiewaehler.eu"
+        >
+          E-Mail schreiben ↗
         </a>
       </div>
     </section>
@@ -1339,7 +1400,10 @@
         </p>
       </div>
 
-      <a class="join-button" href="#kontakt">
+      <a
+        class="join-button"
+        href="mailto:kv-dithmarschen@sh.freiewaehler.eu"
+      >
         Jetzt Kontakt aufnehmen
         <span aria-hidden="true">↗</span>
       </a>
