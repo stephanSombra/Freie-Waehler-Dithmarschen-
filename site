@@ -1,0 +1,1043 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ff6b00">
+
+  <title>Die Kreisvereinigung – Freie Wähler Dithmarschen</title>
+  <meta name="description" content="Wer wir sind, wofür wir stehen und wie du dich bei den Freien Wählern in Dithmarschen einbringen kannst.">
+
+  <style>
+    :root {
+      --orange: #ff6b00;
+      --orange-dark: #e85d00;
+      --white: #ffffff;
+      --black: #111111;
+      --light: #f3f2ef;
+      --grey: #d8d7d2;
+      --muted: #666660;
+      --font: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 25px;
+    }
+
+    body {
+      color: var(--black);
+      background: var(--white);
+      font-family: var(--font);
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topline {
+      height: 7px;
+      background: var(--orange);
+    }
+
+    header {
+      padding: 20px 6%;
+      min-height: 85px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      border-bottom: 1px solid #ecebe8;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 23px;
+      transform: rotate(-5deg);
+    }
+
+    .brand-name {
+      font-size: 15px;
+      letter-spacing: -.5px;
+    }
+
+    .brand-name small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 1.3px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: var(--orange-dark);
+    }
+
+    .nav-button {
+      padding: 14px 17px;
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .nav-button:hover {
+      color: var(--white);
+      background: var(--orange);
+    }
+
+    .page-hero {
+      padding: 100px 8% 95px;
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .page-hero::after {
+      content: "D.";
+      position: absolute;
+      right: 4%;
+      bottom: -110px;
+      color: rgba(255, 107, 0, .13);
+      font-size: clamp(260px, 40vw, 540px);
+      font-weight: 950;
+      letter-spacing: -.1em;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 25px;
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 2.3px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 4px;
+      background: var(--orange);
+    }
+
+    h1 {
+      max-width: 1050px;
+      font-size: clamp(58px, 10vw, 128px);
+      font-weight: 950;
+      letter-spacing: -.085em;
+      line-height: .85;
+      text-transform: uppercase;
+    }
+
+    h1 span {
+      display: block;
+      color: var(--orange);
+    }
+
+    .hero-description {
+      max-width: 620px;
+      margin-top: 35px;
+      color: #d5d5d0;
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.7;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 35px;
+    }
+
+    .hero-meta span {
+      padding: 11px 14px;
+      border: 1px solid #444;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .section {
+      padding: 95px 8%;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: end;
+      margin-bottom: 48px;
+    }
+
+    .section-label {
+      margin-bottom: 18px;
+      color: var(--orange-dark);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: clamp(38px, 6vw, 72px);
+      font-weight: 950;
+      letter-spacing: -.07em;
+      line-height: .94;
+      text-transform: uppercase;
+    }
+
+    h2 span {
+      color: var(--orange);
+    }
+
+    .section-intro {
+      max-width: 520px;
+      color: #555550;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .questions {
+      border-top: 1px solid var(--grey);
+    }
+
+    .question {
+      display: grid;
+      grid-template-columns: 75px 1fr;
+      gap: 22px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--grey);
+    }
+
+    .question-number {
+      padding-top: 5px;
+      color: var(--orange-dark);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .question h3 {
+      margin-bottom: 11px;
+      font-size: clamp(23px, 3vw, 34px);
+      font-weight: 900;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+    }
+
+    .question p {
+      max-width: 760px;
+      color: #555550;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .focus-section {
+      background: var(--light);
+    }
+
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 42px;
+    }
+
+    .focus-card {
+      min-height: 220px;
+      padding: 30px;
+      background: var(--white);
+      border-top: 5px solid var(--orange);
+    }
+
+    .focus-card .number {
+      color: var(--orange-dark);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+    }
+
+    .focus-card h3 {
+      margin-top: 24px;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 950;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+    }
+
+    .focus-card p {
+      margin-top: 13px;
+      color: #5b5b56;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 13px;
+      margin-top: 42px;
+    }
+
+    .board-card {
+      min-height: 190px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--light);
+      border-bottom: 4px solid var(--orange);
+    }
+
+    .board-role {
+      color: var(--orange-dark);
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .board-card h3 {
+      font-size: 20px;
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .board-card p {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    .placeholder-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .events {
+      color: var(--white);
+      background: var(--black);
+    }
+
+    .events .section-intro {
+      color: #c9c9c4;
+    }
+
+    .events-list {
+      margin-top: 45px;
+      border-top: 1px solid #454545;
+    }
+
+    .event {
+      display: grid;
+      grid-template-columns: 130px 1fr auto;
+      align-items: center;
+      gap: 25px;
+      padding: 26px 0;
+      border-bottom: 1px solid #454545;
+    }
+
+    .event-date {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      line-height: 1.6;
+    }
+
+    .event h3 {
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .event p {
+      margin-top: 7px;
+      color: #c9c9c4;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .event-arrow {
+      color: var(--orange);
+      font-size: 26px;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: start;
+    }
+
+    .contact-copy {
+      margin-top: 22px;
+      max-width: 500px;
+      color: #555550;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .contact-panel {
+      padding: 35px;
+      color: var(--white);
+      background: var(--orange);
+    }
+
+    .contact-panel h3 {
+      font-size: 27px;
+      font-weight: 950;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+    }
+
+    .contact-panel p {
+      margin-top: 15px;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .contact-details {
+      margin-top: 26px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,.45);
+    }
+
+    .contact-details p + p {
+      margin-top: 10px;
+    }
+
+    .contact-details a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-button {
+      display: inline-flex;
+      margin-top: 25px;
+      padding: 16px 20px;
+      background: var(--white);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .contact-button:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .join-banner {
+      padding: 80px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 35px;
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .join-banner h2 {
+      max-width: 720px;
+      font-size: clamp(38px, 6vw, 72px);
+    }
+
+    .join-banner p {
+      max-width: 520px;
+      margin-top: 18px;
+      line-height: 1.7;
+    }
+
+    .join-button {
+      flex-shrink: 0;
+      display: inline-flex;
+      padding: 18px 22px;
+      gap: 18px;
+      background: var(--white);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .join-button:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    footer {
+      padding: 34px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .footer-brand {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .7px;
+      text-transform: uppercase;
+    }
+
+    .footer-brand span {
+      color: var(--orange-dark);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .footer-links a:hover {
+      color: var(--orange-dark);
+    }
+
+    .footer-note {
+      width: 100%;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a:not(.nav-button) {
+        display: none;
+      }
+
+      .section {
+        padding: 75px 6%;
+      }
+
+      .section-heading {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .board-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .join-banner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 70px 6%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .brand-name {
+        font-size: 12px;
+      }
+
+      .brand-name small {
+        font-size: 9px;
+      }
+
+      .nav-button {
+        padding: 12px;
+        font-size: 10px;
+      }
+
+      .page-hero {
+        padding: 75px 6% 70px;
+      }
+
+      h1 {
+        font-size: clamp(54px, 15vw, 86px);
+      }
+
+      .question {
+        grid-template-columns: 42px 1fr;
+        gap: 10px;
+      }
+
+      .question p {
+        font-size: 15px;
+      }
+
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .focus-card {
+        min-height: 190px;
+      }
+
+      .board-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .board-card {
+        min-height: 175px;
+        padding: 17px;
+      }
+
+      .board-card h3 {
+        font-size: 17px;
+      }
+
+      .event {
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+      }
+
+      .event-date {
+        grid-column: 1 / -1;
+      }
+
+      .event h3 {
+        font-size: 19px;
+      }
+
+      .contact-panel {
+        padding: 25px;
+      }
+
+      footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topline"></div>
+
+  <header>
+    <a class="brand" href="index.html" aria-label="Zur Startseite">
+      <div class="brand-mark" aria-hidden="true">F</div>
+      <div class="brand-name">
+        Freie Wähler
+        <small>Kreisvereinigung Dithmarschen</small>
+      </div>
+    </a>
+
+    <nav aria-label="Hauptnavigation">
+      <a href="#wir">Über uns</a>
+      <a href="#vorstand">Vorstand</a>
+      <a href="#termine">Termine</a>
+      <a href="#kontakt" class="nav-button">Kontakt ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="hero-inner">
+        <div class="eyebrow">Die Menschen hinter der Idee</div>
+
+        <h1>
+          Politik.
+          <span>Von hier.</span>
+          Für morgen.
+        </h1>
+
+        <p class="hero-description">
+          Wir sind die Kreisvereinigung der Freien Wähler in Dithmarschen.
+          Hier erfährst du, wer wir sind, was uns antreibt und wie du
+          mit uns über die Zukunft unserer Region ins Gespräch kommen kannst.
+        </p>
+
+        <div class="hero-meta">
+          <span>Regional verwurzelt</span>
+          <span>Unabhängig im Denken</span>
+          <span>Offen für Ideen</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="wir">
+      <div class="section-heading">
+        <div>
+          <div class="section-label">Fünf Fragen. Klare Antworten.</div>
+          <h2>Wer wir sind.<br><span>Was uns bewegt.</span></h2>
+        </div>
+
+        <p class="section-intro">
+          Politik muss verständlich sein. Deshalb wollen wir transparent
+          zeigen, wofür unsere Kreisvereinigung steht, welche Themen uns
+          beschäftigen und wie Bürgerinnen und Bürger sich beteiligen können.
+        </p>
+      </div>
+
+      <div class="questions">
+        <article class="question">
+          <div class="question-number">01 / WER?</div>
+          <div>
+            <h3>Wer sind wir?</h3>
+            <p>
+              Wir sind die Kreisvereinigung der Freien Wähler Dithmarschen.
+              Unser Anspruch ist eine sachorientierte, bürgernahe Politik,
+              die regionale Erfahrungen ernst nimmt und unterschiedliche
+              Perspektiven zusammenbringt.
+            </p>
+          </div>
+        </article>
+
+        <article class="question">
+          <div class="question-number">02 / WAS?</div>
+          <div>
+            <h3>Wofür stehen wir?</h3>
+            <p>
+              Für unabhängiges Denken, nachvollziehbare Entscheidungen,
+              starke Gemeinden und einen offenen Dialog. Unsere konkreten
+              politischen Positionen sollen transparent dargestellt und
+              an den Herausforderungen vor Ort ausgerichtet werden.
+            </p>
+          </div>
+        </article>
+
+        <article class="question">
+          <div class="question-number">03 / WARUM?</div>
+          <div>
+            <h3>Warum engagieren wir uns?</h3>
+            <p>
+              Weil die Zukunft unserer Region nicht von allein entsteht.
+              Wir möchten Probleme frühzeitig ansprechen, Ideen entwickeln
+              und dazu beitragen, dass Entscheidungen die Lebensrealität
+              der Menschen in Dithmarschen berücksichtigen.
+            </p>
+          </div>
+        </article>
+
+        <article class="question">
+          <div class="question-number">04 / WO?</div>
+          <div>
+            <h3>Wo sind wir aktiv?</h3>
+            <p>
+              Unser Blick richtet sich auf den gesamten Kreis Dithmarschen:
+              auf Städte, Gemeinden, den ländlichen Raum, die Küste und
+              die Menschen, die unsere Region prägen. Lokale Ansprechpartner
+              und konkrete Aktivitäten werden hier ergänzt.
+            </p>
+          </div>
+        </article>
+
+        <article class="question">
+          <div class="question-number">05 / WIE?</div>
+          <div>
+            <h3>Wie kannst du mitmachen?</h3>
+            <p>
+              Mit einer Frage, einer Idee, einem Gespräch oder deinem
+              persönlichen Engagement. Du musst nicht bereits politisch
+              aktiv sein, um den ersten Schritt zu machen.
+            </p>
+            <a class="text-link" href="#kontakt">
+              Komm mit uns ins Gespräch <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section focus-section" id="themen">
+      <div class="section-heading">
+        <div>
+          <div class="section-label">Unsere Themen</div>
+          <h2>Was Dithmarschen <span>voranbringt.</span></h2>
+        </div>
+
+        <p class="section-intro">
+          Gute Politik beginnt mit konkreten Fragen. Diese Themenfelder
+          können die Grundlage für unsere Arbeit bilden. Die endgültigen
+          Positionen und Forderungen sollten von der Kreisvereinigung
+          geprüft und beschlossen werden.
+        </p>
+      </div>
+
+      <div class="focus-grid">
+        <article class="focus-card">
+          <div class="number">THEMA / 01</div>
+          <h3>Starke Gemeinden</h3>
+          <p>
+            Lebenswerte Orte, handlungsfähige Kommunen und Entscheidungen,
+            die vor Ort nachvollziehbar sind.
+          </p>
+        </article>
+
+        <article class="focus-card">
+          <div class="number">THEMA / 02</div>
+          <h3>Natur & Artenvielfalt</h3>
+          <p>
+            Unsere Landschaft und heimischen Arten schützen sowie
+            Natur- und Artenschutz in der Region sichtbar machen.
+          </p>
+        </article>
+
+        <article class="focus-card">
+          <div class="number">THEMA / 03</div>
+          <h3>Leben auf dem Land</h3>
+          <p>
+            Gute Rahmenbedingungen für Familien, Vereine, Ehrenamt
+            und das tägliche Leben in den Gemeinden.
+          </p>
+        </article>
+
+        <article class="focus-card">
+          <div class="number">THEMA / 04</div>
+          <h3>Zukunft gestalten</h3>
+          <p>
+            Regionale Ideen aufgreifen, Chancen nutzen und Lösungen
+            entwickeln, die langfristig tragfähig sind.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="vorstand">
+      <div class="section-heading">
+        <div>
+          <div class="section-label">Verantwortung & Ansprechpartner</div>
+          <h2>Der Vorstand.<br><span>Das Team dahinter.</span></h2>
+        </div>
+
+        <p class="section-intro">
+          Eine transparente Anlaufstelle für Mitglieder, Interessierte
+          und Menschen mit Ideen für Dithmarschen. Hier können die
+          tatsächlichen Vorstandsmitglieder mit ihren Funktionen und
+          offiziellen Kontaktdaten vorgestellt werden.
+        </p>
+      </div>
+
+      <div class="board-grid">
+        <article class="board-card">
+          <div class="board-role">1. Vorsitz</div>
+          <div>
+            <h3>[Name ergänzen]</h3>
+            <p>Vorsitz der Kreisvereinigung</p>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <div class="board-role">2. Vorsitz</div>
+          <div>
+            <h3>[Name ergänzen]</h3>
+            <p>Stellvertretender Vorsitz</p>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <div class="board-role">Finanzen</div>
+          <div>
+            <h3>[Name ergänzen]</h3>
+            <p>Schatzmeister/in</p>
+          </div>
+        </article>
+
+        <article class="board-card">
+          <div class="board-role">Organisation</div>
+          <div>
+            <h3>[Name ergänzen]</h3>
+            <p>Schriftführung / weitere Funktion</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="placeholder-note">
+        Hinweis: Die Namen und Funktionen sind Platzhalter und müssen
+        vor Veröffentlichung anhand der aktuellen Besetzung ergänzt
+        und bestätigt werden.
+      </p>
+    </section>
+
+    <section class="section events" id="termine">
+      <div class="section-heading">
+        <div>
+          <div class="section-label">Begegnungen & Austausch</div>
+          <h2>Was steht <span>an?</span></h2>
+        </div>
+
+        <p class="section-intro">
+          Sitzungen, Gespräche, Veranstaltungen und öffentliche Termine:
+          Hier finden Interessierte die nächsten bestätigten Möglichkeiten,
+          die Kreisvereinigung persönlich kennenzulernen.
+        </p>
+      </div>
+
+      <div class="events-list">
+        <article class="event">
+          <div class="event-date">Termin 01<br>[Datum]</div>
+          <div>
+            <h3>[Veranstaltung ergänzen]</h3>
+            <p>[Uhrzeit, Ort und Informationen ergänzen]</p>
+          </div>
+          <div class="event-arrow" aria-hidden="true">↗</div>
+        </article>
+
+        <article class="event">
+          <div class="event-date">Termin 02<br>[Datum]</div>
+          <div>
+            <h3>[Veranstaltung ergänzen]</h3>
+            <p>[Uhrzeit, Ort und Informationen ergänzen]</p>
+          </div>
+          <div class="event-arrow" aria-hidden="true">↗</div>
+        </article>
+
+        <article class="event">
+          <div class="event-date">Termin 03<br>[Datum]</div>
+          <div>
+            <h3>[Veranstaltung ergänzen]</h3>
+            <p>[Uhrzeit, Ort und Informationen ergänzen]</p>
+          </div>
+          <div class="event-arrow" aria-hidden="true">↗</div>
+        </article>
+      </div>
+
+      <p class="placeholder-note">
+        Es werden erst nach Prüfung echte Termine eingetragen.
+        Nicht öffentliche Sitzungen sollten entsprechend gekennzeichnet
+        werden.
+      </p>
+    </section>
+
+    <section class="section contact" id="kontakt">
+      <div>
+        <div class="section-label">Der direkte Draht</div>
+        <h2>Eine Idee?<br><span>Wir hören zu.</span></h2>
+
+        <p class="contact-copy">
+          Du möchtest ein Thema ansprechen, hast eine Frage zur Arbeit
+          der Kreisvereinigung oder interessierst dich für eine Mitarbeit?
+          Schreib uns. Ein offener Austausch ist der Anfang.
+        </p>
+      </div>
+
+      <div class="contact-panel">
+        <h3>Kontakt aufnehmen.</h3>
+        <p>
+          Die offiziellen Kontaktdaten der Kreisvereinigung werden
+          hier veröffentlicht, sobald sie geprüft und freigegeben sind.
+        </p>
+
+        <div class="contact-details">
+          <p><strong>E-Mail:</strong><br>
+            [Offizielle E-Mail-Adresse ergänzen]
+          </p>
+          <p><strong>Postanschrift:</strong><br>
+            [Offizielle Anschrift ergänzen]
+          </p>
+          <p><strong>Social Media:</strong><br>
+            [Offizielle Profile ergänzen]
+          </p>
+        </div>
+
+        <a class="contact-button" href="mailto:KONTAKTADRESSE-HIER-EINTRAGEN">
+          E-Mail schreiben ↗
+        </a>
+      </div>
+    </section>
+
+    <section class="join-banner">
+      <div>
+        <div class="eyebrow" style="color: #fff;">Deine Stimme zählt</div>
+        <h2>Dithmarschen ist, was wir daraus machen.</h2>
+        <p>
+          Bring deine Perspektive ein. Stell Fragen. Mach Vorschläge.
+          Und lerne die Menschen kennen, die sich für unsere Region
+          engagieren möchten.
+        </p>
+      </div>
+
+      <a class="join-button" href="#kontakt">
+        Jetzt Kontakt aufnehmen <span aria-hidden="true">↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      Freie Wähler <span>/</span> Dithmarschen
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Startseite</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+
+    <p class="footer-note">
+      Vor Veröffentlichung bitte alle Platzhalter ersetzen, Kontaktangaben
+      prüfen und ein vollständiges Impressum sowie eine Datenschutzerklärung
+      ergänzen. Die Seite ist ein Gestaltungsvorschlag und keine offizielle
+      Bestätigung der aufgeführten politischen Positionen.
+    </p>
+  </footer>
+</body>
+</html>
