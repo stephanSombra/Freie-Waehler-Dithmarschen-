@@ -3,152 +3,367 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Freie Wähler Dithmarschen – engagiert für unsere Region.">
-  <title>Freie Wähler Dithmarschen</title>
+
+  <meta name="description" content="Freie Wähler Kreisvereinigung Dithmarschen – unabhängig, regional und mittendrin.">
+
+  <title>Freie Wähler – Dithmarschen</title>
 
   <style>
     * {
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
     }
 
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #fff;
-      color: #222;
+      background: #111;
+      color: #fff;
     }
 
     .hero {
+      position: relative;
+      min-height: 100svh;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(5, 9, 15, 0.83) 0%,
+          rgba(5, 9, 15, 0.58) 48%,
+          rgba(5, 9, 15, 0.12) 100%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.48),
+          transparent 40%
+        ),
+        url("dithmarschen-hero.jpg") center center / cover no-repeat;
+      border-right: 10px solid #f56608;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      padding: 25px 5.5%;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .brand-mark {
+      width: 48px;
+      height: 58px;
+      display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-      color: #fff;
-      background:
-        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)),
-        url("dithmarschen-hero.jpg") center/cover no-repeat;
+      flex-shrink: 0;
+      background: #f56608;
+      font-size: 34px;
+      font-weight: 900;
+      transform: skewY(-5deg);
+    }
+
+    .brand-name {
+      font-size: 21px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .brand-subtitle {
+      margin-top: 7px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+    }
+
+    .top-claim {
+      text-align: right;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: 3px;
     }
 
     .hero-content {
       width: 100%;
-      max-width: 850px;
+      max-width: 1100px;
+      margin: auto 0;
+      padding: 65px 5.5% 100px;
     }
 
     .eyebrow {
-      margin-bottom: 18px;
-      color: #ff8a00;
-      font-size: 0.95rem;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 38px;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 4px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 6px;
+      flex-shrink: 0;
+      background: #f56608;
     }
 
     h1 {
-      margin: 0 0 20px;
-      font-size: clamp(2.4rem, 7vw, 5rem);
-      line-height: 1.08;
+      margin: 0;
+      font-size: clamp(48px, 8vw, 108px);
+      line-height: 1.05;
+      font-weight: 900;
+      letter-spacing: -3px;
     }
 
-    .hero p {
-      max-width: 680px;
-      margin: 0 auto 32px;
-      font-size: clamp(1.05rem, 2.5vw, 1.35rem);
-      line-height: 1.7;
+    h1 span {
+      display: block;
+      color: #f56608;
+      margin-top: 8px;
+    }
+
+    .hero-description {
+      margin: 34px 0 0;
+      font-size: clamp(17px, 2vw, 25px);
+      line-height: 1.6;
+    }
+
+    .hero-description strong {
+      display: block;
+      font-size: 1.05em;
     }
 
     .hero-button {
-      display: inline-block;
-      padding: 15px 28px;
-      border-radius: 6px;
-      background: #f58220;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      width: fit-content;
+      min-width: 420px;
+      margin-top: 54px;
+      padding: 22px 28px;
+      background: #f56608;
       color: #fff;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: background 0.2s ease, transform 0.2s ease;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      transition: background 0.2s ease;
     }
 
     .hero-button:hover {
-      background: #df6e0c;
-      transform: translateY(-2px);
+      background: #d95200;
     }
 
-    .hero-button:focus-visible {
-      outline: 3px solid #fff;
-      outline-offset: 4px;
+    .button-arrow {
+      font-size: 25px;
+      letter-spacing: 0;
     }
 
-    footer {
-      padding: 18px 15px;
-      text-align: center;
-      background: #171717;
-      color: #ddd;
-      font-size: 0.9rem;
+    .footer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 5.5%;
+      background: rgba(10, 10, 10, 0.76);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
     }
 
-    footer a {
-      margin: 0 8px;
+    .footer-brand span {
+      color: #f56608;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer a {
       color: #fff;
       text-decoration: none;
     }
 
-    footer a:hover {
-      color: #ff8a00;
+    .footer a:hover {
+      color: #f56608;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .hero {
-        min-height: 90vh;
-        padding: 30px 18px;
+        min-height: 100svh;
+        border-right-width: 6px;
+        background-position: center center;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        padding: 20px 6%;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 46px;
+        font-size: 27px;
+      }
+
+      .brand-name {
+        font-size: 15px;
+      }
+
+      .brand-subtitle {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+      }
+
+      .top-claim {
+        max-width: 125px;
+        font-size: 10px;
+        letter-spacing: 1.5px;
+      }
+
+      .hero-content {
+        padding: 45px 6% 125px;
+      }
+
+      .eyebrow {
+        gap: 12px;
+        margin-bottom: 26px;
+        font-size: 11px;
+        letter-spacing: 2px;
+      }
+
+      .eyebrow::before {
+        width: 30px;
+        height: 4px;
+      }
+
+      h1 {
+        font-size: clamp(42px, 10vw, 68px);
+        letter-spacing: -1.5px;
+      }
+
+      .hero-description {
+        margin-top: 24px;
+        font-size: 16px;
       }
 
       .hero-button {
         width: 100%;
-        max-width: 320px;
+        min-width: 0;
+        margin-top: 34px;
+        padding: 19px 17px;
+        font-size: 11px;
+        letter-spacing: 1px;
       }
 
-      footer a {
-        display: inline-block;
-        margin: 6px;
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 13px;
+        padding: 17px 6%;
+        font-size: 10px;
+        letter-spacing: 1.3px;
+      }
+
+      .footer-links {
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .top-claim {
+        max-width: 100px;
+        font-size: 9px;
+      }
+
+      h1 {
+        font-size: 39px;
       }
     }
   </style>
 </head>
 
 <body>
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <div class="eyebrow">Freie Wähler Dithmarschen</div>
 
-        <h1>Unsere Heimat.<br>Unsere Verantwortung.</h1>
+  <main class="hero">
 
-        <p>
-          Unabhängig, bürgernah und engagiert für Dithmarschen.
-          Gemeinsam möchten wir unsere Region gestalten und die
-          Anliegen der Menschen vor Ort in den Mittelpunkt stellen.
-        </p>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Freie Wähler Dithmarschen – Startseite">
+        <span class="brand-mark">F</span>
 
-        <a class="hero-button" href="site.html">
-          Unsere Arbeit kennenlernen →
-        </a>
+        <span>
+          <span class="brand-name">FREIE WÄHLER</span>
+          <span class="brand-subtitle" style="display:block">
+            KREISVEREINIGUNG DITHMARSCHEN
+          </span>
+        </span>
+      </a>
+
+      <div class="top-claim">
+        UNABHÄNGIG.<br>
+        REGIONAL. MITTENDRIN.
       </div>
+    </header>
+
+    <section class="hero-content">
+      <div class="eyebrow">FÜR UNSERE REGION</div>
+
+      <h1>
+        DITHMARSCHEN.
+        <span>MEHR ALS PLATT.</span>
+      </h1>
+
+      <p class="hero-description">
+        <strong>Unsere Heimat. Unsere Zukunft.</strong>
+        Zeit, gemeinsam nach vorn zu denken.
+      </p>
+
+      <a class="hero-button" href="site.html">
+        <span>ENTDECKE DIE KREISVEREINIGUNG</span>
+        <span class="button-arrow" aria-hidden="true">↗</span>
+      </a>
     </section>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <span>FREIE WÄHLER</span> / DITHMARSCHEN
+      </div>
+
+      <nav class="footer-links" aria-label="Rechtliche Informationen">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+
   </main>
 
-  <footer>
-    <a href="site.html">Über uns</a>
-    <a href="site.html#kontakt">Kontakt</a>
-    <a href="impressum.html">Impressum</a>
-    <a href="datenschutz.html">Datenschutz</a>
-    <p>© Freie Wähler Dithmarschen</p>
-  </footer>
 </body>
 </html>
