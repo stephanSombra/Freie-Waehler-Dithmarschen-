@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum | FREIE WÄHLER Dithmarschen</title>
+  <meta name="description" content="Impressum der FREIEN WÄHLER – Kreisvereinigung Dithmarschen.">
+  <meta name="theme-color" content="#111111">
+  <link rel="icon" href="images/favicon.ico" sizes="any">
+
+  <style>
+    :root {
+      --orange: #f56608;
+      --black: #111111;
+      --white: #ffffff;
+      --light: #f5f5f5;
+      --grey: #666666;
+      --border: #e5e5e5;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--black);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--orange);
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* Header */
+
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      min-height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-weight: 800;
+      line-height: 1.25;
+    }
+
+    .brand-logo {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-size: 16px;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-name span {
+      display: block;
+      color: var(--orange);
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .main-nav a:hover {
+      color: var(--orange);
+    }
+
+    /* Hero */
+
+    .page-hero {
+      background: var(--black);
+      color: var(--white);
+      padding: 68px 0 64px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 800;
+      margin: 0 0 16px;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin: 0 0 22px;
+    }
+
+    .page-hero p {
+      color: #dddddd;
+      font-size: 17px;
+      max-width: 650px;
+      margin: 0;
+    }
+
+    /* Inhalt */
+
+    .content-section {
+      padding: 64px 0 80px;
+    }
+
+    .content-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .legal-content h2 {
+      font-size: 25px;
+      line-height: 1.25;
+      margin: 0 0 18px;
+      letter-spacing: -0.5px;
+    }
+
+    .legal-content h3 {
+      font-size: 18px;
+      margin: 32px 0 8px;
+    }
+
+    .legal-content p {
+      margin: 0 0 18px;
+      color: #333333;
+    }
+
+    .legal-content address {
+      font-style: normal;
+      margin-bottom: 18px;
+    }
+
+    .legal-content a {
+      text-decoration: underline;
+      text-decoration-color: var(--orange);
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+
+    .legal-content a:hover {
+      color: var(--orange);
+    }
+
+    .info-card {
+      background: var(--light);
+      border-bottom: 4px solid var(--orange);
+      padding: 26px;
+    }
+
+    .info-card h2 {
+      font-size: 20px;
+      margin: 0 0 12px;
+      line-height: 1.3;
+    }
+
+    .info-card p {
+      font-size: 14px;
+      color: #444444;
+      margin: 0 0 14px;
+    }
+
+    .info-card a {
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .info-card a:hover {
+      color: var(--orange);
+    }
+
+    .notice {
+      margin-top: 32px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--orange);
+      background: var(--light);
+      font-size: 14px;
+      color: #444444;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      background: var(--black);
+      color: var(--white);
+      padding: 32px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: #cccccc;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .footer-nav a:hover {
+      color: var(--orange);
+    }
+
+    @media (max-width: 760px) {
+      .container {
+        width: min(100% - 32px, var(--max-width));
+      }
+
+      .header-inner {
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .main-nav {
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .page-hero {
+        padding: 48px 0;
+      }
+
+      .page-hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .content-section {
+        padding: 42px 0 56px;
+      }
+
+      .content-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="site.html" aria-label="Startseite der Kreisvereinigung Dithmarschen">
+        <img
+          class="brand-logo"
+          src="images/logo-dithmarschen.jpg"
+          alt=""
+          width="54"
+          height="54"
+        >
+        <span class="brand-name">
+          FREIE WÄHLER
+          <span>DITHMARSCHEN</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Hauptnavigation">
+        <a href="site.html">Startseite</a>
+        <a href="site.html#wir">Über uns</a>
+        <a href="site.html#themen">Themen</a>
+        <a href="site.html#vorstand">Vorstand</a>
+        <a href="site.html#kontakt">Kontakt</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Rechtliche Informationen</p>
+        <h1>Impressum</h1>
+        <p>
+          Angaben zum Anbieter und zu den Kontaktmöglichkeiten
+          der FREIEN WÄHLER – Kreisvereinigung Dithmarschen.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container content-layout">
+
+        <article class="legal-content">
+
+          <h2>Angaben gemäß § 5 DDG</h2>
+
+          <address>
+            <strong>FREIE WÄHLER – Kreisvereinigung Dithmarschen</strong><br>
+            Torfweg 12<br>
+            25795 Weddingstedt<br>
+            Deutschland
+          </address>
+
+          <h3>Organisatorische Zugehörigkeit</h3>
+          <p>
+            Die Kreisvereinigung Dithmarschen ist eine Untergliederung
+            der FREIEN WÄHLER. Sie gehört zur Organisationsstruktur
+            der FREIEN WÄHLER auf Landes- und Bundesebene.
+          </p>
+
+          <p>
+            <a href="https://fwsh.eu/" target="_blank" rel="noopener noreferrer">
+              FREIE WÄHLER Schleswig-Holstein
+            </a>
+          </p>
+
+          <h3>Kreisvorstand</h3>
+          <p>
+            <strong>Kreisvorsitzender:</strong> Andreas Wendt<br>
+            <strong>Stellvertretender Kreisvorsitzender:</strong>
+            Michael Potthast<br>
+            <strong>Kreisschatzmeister:</strong> Stephan Schulz<br>
+            <strong>Kreisschriftführer:</strong> Michel Benart
+          </p>
+
+          <h3>Kontakt</h3>
+          <p>
+            <strong>Telefon:</strong>
+            <a href="tel:+491604214488">0160-4214488</a><br>
+            <strong>E-Mail:</strong>
+            <a href="mailto:kv-dithmarschen@sh.freiewaehler.eu">
+              kv-dithmarschen@sh.freiewaehler.eu
+            </a>
+          </p>
+
+          <h3>Verantwortlichkeit für redaktionelle Inhalte</h3>
+          <p>
+            Die konkrete verantwortliche Person und ihre ladungsfähige
+            Anschrift sind vor Veröffentlichung zu klären, sofern für
+            die Inhalte dieser Website eine entsprechende gesetzliche
+            Benennungspflicht besteht.
+          </p>
+
+          <h3>Weitere Onlinepräsenzen</h3>
+          <p>
+            <strong>Website:</strong>
+            <a href="https://www.freiewaehler.eu/" target="_blank" rel="noopener noreferrer">
+              www.freiewaehler.eu
+            </a><br>
+
+            <strong>Landesverband:</strong>
+            <a href="https://fwsh.eu/" target="_blank" rel="noopener noreferrer">
+              fwsh.eu
+            </a><br>
+
+            <strong>Facebook:</strong>
+            <a href="https://www.facebook.com/FreieWaehlerSH" target="_blank" rel="noopener noreferrer">
+              Freie Wähler Schleswig-Holstein
+            </a><br>
+
+            <strong>Instagram:</strong>
+            <a href="https://www.instagram.com/freiewaehler_dithmarschen/" target="_blank" rel="noopener noreferrer">
+              @freiewaehler_dithmarschen
+            </a>
+          </p>
+
+          <h3>Haftung für Inhalte</h3>
+          <p>
+            Wir bemühen uns, die Inhalte dieser Website sorgfältig
+            und aktuell zu halten. Für die Richtigkeit, Vollständigkeit
+            und Aktualität der Inhalte kann jedoch keine Gewähr
+            übernommen werden. Die gesetzlichen Verpflichtungen zur
+            Entfernung oder Sperrung rechtswidriger Inhalte bleiben
+            unberührt.
+          </p>
+
+          <h3>Haftung für externe Links</h3>
+          <p>
+            Diese Website kann Links zu externen Websites Dritter
+            enthalten. Auf deren Inhalte haben wir keinen Einfluss.
+            Für die Inhalte der verlinkten Seiten ist grundsätzlich
+            der jeweilige Anbieter oder Betreiber verantwortlich.
+          </p>
+
+          <h3>Urheberrecht</h3>
+          <p>
+            Die auf dieser Website veröffentlichten Inhalte und Werke
+            unterliegen dem deutschen Urheberrecht, soweit keine
+            abweichenden Rechte Dritter bestehen. Eine Verwendung
+            außerhalb der gesetzlichen Grenzen bedarf der Zustimmung
+            der jeweiligen Rechteinhaber.
+          </p>
+
+          <div class="notice">
+            <strong>Hinweis vor Veröffentlichung</strong><br>
+            Die Vertretungsberechtigung des Kreisvorsitzenden und die
+            gegebenenfalls erforderliche verantwortliche Person für
+            redaktionelle Inhalte müssen mit dem Landesverband
+            abgestimmt werden. Bitte prüfe außerdem, ob die angegebene
+            Postanschrift als offizielle Anbieteranschrift verwendet
+            werden soll.
+          </div>
+
+        </article>
+
+        <aside class="info-card">
+          <h2>Kontakt zur Kreisvereinigung</h2>
+
+          <p>
+            Du hast Fragen, Anregungen oder möchtest mit uns ins
+            Gespräch kommen? Wir freuen uns über deine Nachricht.
+          </p>
+
+          <p>
+            <strong>E-Mail</strong><br>
+            <a href="mailto:kv-dithmarschen@sh.freiewaehler.eu">
+              kv-dithmarschen@sh.freiewaehler.eu
+            </a>
+          </p>
+
+          <p>
+            <strong>Postanschrift</strong><br>
+            FREIE WÄHLER – Kreisvereinigung Dithmarschen<br>
+            Torfweg 12<br>
+            25795 Weddingstedt
+          </p>
+
+          <p>
+            <strong>Kreisvorsitzender</strong><br>
+            Andreas Wendt
+          </p>
+
+          <p>
+            <a href="site.html#kontakt">Zur Kontaktseite →</a>
+          </p>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-copy">
+        © <span id="year">2026</span>
+         FREIE WÄHLER – Kreisvereinigung Dithmarschen 
+      </div>
+
+      <nav class="footer-nav" aria-label="Fußnavigation">
+         <a href="site.html">Startseite</a> <a href="site.html">Startseite</a>
+        <a href="site.html#kontakt">Kontakt</a>
+        <a href="impressum.html" aria-current="page">Impressum</a>
+         <a href="datenschutz.html">Datenschutz</a> <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
